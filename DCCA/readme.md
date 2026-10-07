@@ -64,10 +64,17 @@ Kepala perpustakaan, Ibu Arini, membutuhkan prototipe sistem katalog digital unt
 | **Soal 2 — Analisis RCA Bug** | Penjelasan detail letak kesalahan logika sorting lama | **Paket C (Role 3)** | *[Open Slot]* | [ ] Belum |
 | **Soal 2 — Kode C Perbaikan** | Penulisan kode C `soal2_fixed.c` (Sorting yang benar) | **Paket C (Role 3)** | *[Open Slot]* | [ ] Belum |
 | **Soal 2 — Flowchart Sorting** | Diagram alir proses algoritma sorting yang benar | **Paket D (Role 4)** | *[Open Slot]* | [ ] Belum |
-| **Kompilasi Laporan DCCA** | Penggabungan naskah ke `TK1-W7-S15-R3 - Jawab.docx` | **Paket E (Role 5)** | *[Open Slot]* | [ ] Belum |
+| **Kompilasi Laporan DCCA** | Pengisian laporan di Word Online (SharePoint) | **Paket E (Role 5)** | *[Open Slot]* | [ ] Belum |
 | **Format Sitasi & Referensi** | Standardisasi format sitasi dan sumber referensi | **Paket E (Role 5)** | *[Open Slot]* | [ ] Belum |
 | **Draft AI Declaration Form** | Pengisian tabel pemanfaatan AI di `AI_Usage...docx` | **Paket E (Role 5)** | *[Open Slot]* | [ ] Belum |
 | **Final Review & Sign-off** | Quality check seluruh jawaban & TTD AI Declaration | **Paket A (Role 1)** | *[Open Slot]* | [ ] Belum |
+
+---
+
+## 🌐 Lembar Jawaban Cloud (Live Collaboration)
+
+Laporan DCCA dikerjakan bersama di Word Online untuk menghindari konflik file Word offline di Git:  
+👉 🔗 [**Klik di Sini untuk Membuka Lembar Jawaban DCCA di Word Online (SharePoint)**](https://binusianorg-my.sharepoint.com/personal/chandra_perdiansyah_binus_ac_id/_layouts/15/guestaccess.aspx?share=IQAT74haa2EvTK_6WGCo91GhAU4SjPmNGDBg92X-XnNqohQ&e=ZqP1tV)
 
 ---
 
@@ -76,10 +83,10 @@ Kepala perpustakaan, Ibu Arini, membutuhkan prototipe sistem katalog digital unt
 ```text
 DCCA/
 ├── TK1-W7-S15-R3.docx                 # Panduan soal resmi dari dosen
-├── TK1-W7-S15-R3 - Jawab.docx         # Berkas laporan jawaban resmi (Cover & isi)
 ├── AI_Usage_Declaration_Form_EN.docx  # Formulir pernyataan pemanfaatan AI resmi
-├── soal1.c                            # Source code program katalog struct & union
-├── soal2_fixed.c                      # Source code program sorting yang telah diperbaiki
+├── DRAFT_LAPORAN_DCCA.md              # Template checklist & panduan isi laporan
+├── soal1.c                            # Starter code program katalog struct & union
+├── soal2_fixed.c                      # Starter code program sorting yang diperbaiki
 └── readme.md                          # Panduan modul DCCA ini
 ```
 

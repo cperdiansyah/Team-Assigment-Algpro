@@ -64,17 +64,24 @@ Supermarket Nusantara Sejahtera membutuhkan pengembangan dua sistem:
 
 ---
 
+## 🌐 Lembar Jawaban Cloud (Live Collaboration)
+
+Laporan Praktikum ACCA dikerjakan bersama di Word Online untuk menghindari konflik file Word offline di Git:  
+👉 🔗 [**Klik di Sini untuk Membuka Lembar Jawaban ACCA di Word Online (SharePoint)**](https://binusianorg-my.sharepoint.com/personal/chandra_perdiansyah_binus_ac_id/_layouts/15/guestaccess.aspx?share=IQDlFVz24AVrRrV23UQVi01wAd2XouL18Zle9THxrp1UASs&e=Urmhib)
+
+---
+
 ## 📁 Struktur Berkas Modul ACCA
 
 ```text
 ACCA/
 ├── Tugas Praktikum 2 (Kelompok)...docx   # Panduan soal resmi praktikum
-├── Tugas Praktikum 2 - Jawab.docx         # Lembar jawaban laporan ACCA
 ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi ACCA
-├── tugas2a.c                              # Program C data pegawai (Struct)
-├── tugas2b.c                              # Program C gaji bulanan + jam lembur
-├── tugas2c.c                              # Program C diskon belanja 5% & kupon undian
-└── README.md                              # Dokumentasi teknis khusus ACCA ini
+├── DRAFT_LAPORAN_ACCA.md                  # Template checklist & panduan isi laporan
+├── tugas2a.c                              # Starter code data pegawai (Struct)
+├── tugas2b.c                              # Starter code gaji bulanan + jam lembur
+├── tugas2c.c                              # Starter code diskon belanja 5% & kupon undian
+└── README.md                              # Dokumentasi teknis & tautan cloud ACCA ini
 ```
 
 ---

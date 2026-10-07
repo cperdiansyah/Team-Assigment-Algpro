@@ -21,28 +21,43 @@
 
 ---
 
+## 🌐 Live Collaboration — Lembar Jawaban Cloud (SharePoint)
+
+Untuk mencegah konflik saat mengedit berkas Word secara offline di Git, penulisan laporan resmi dilakukan secara **real-time dan kolaboratif via Cloud (Word Online / SharePoint)**:
+
+| Modul Tugas | Sesi Perkuliahan | Tautan Lembar Jawaban Cloud (Live Collaboration) |
+|:---:|:---:|---|
+| **DCCA** | Lecture (Teori) | 🔗 [**Buka Lembar Jawaban DCCA di Word Online**](https://binusianorg-my.sharepoint.com/personal/chandra_perdiansyah_binus_ac_id/_layouts/15/guestaccess.aspx?share=IQAT74haa2EvTK_6WGCo91GhAU4SjPmNGDBg92X-XnNqohQ&e=ZqP1tV) |
+| **ACCA** | Lab (Praktikum) | 🔗 [**Buka Lembar Jawaban ACCA di Word Online**](https://binusianorg-my.sharepoint.com/personal/chandra_perdiansyah_binus_ac_id/_layouts/15/guestaccess.aspx?share=IQDlFVz24AVrRrV23UQVi01wAd2XouL18Zle9THxrp1UASs&e=Urmhib) |
+
+> 📌 **Ketentuan Kolaborasi Tim:**  
+> - **Source Code C:** Dikelola di repository Git ini menggunakan branch masing-masing.  
+> - **Laporan Tulisan & Dokumentasi:** Langsung ditulis dan dilengkapi bersama-sama di tautan SharePoint di atas!
+
+---
+
 ## 🏛️ Arsitektur Repository (Monorepo)
 
 ```text
 Team-Assigment-Algpro/
-├── README.md                                  # [INI] Portal utama & katalog peran tim
+├── README.md                                  # [INI] Portal utama, link cloud doc, & katalog peran
 │
 ├── DCCA/                                      # [Sesi Lecture / Teori] - Kelas DCCA - LEC
 │   ├── TK1-W7-S15-R3.docx                     # Panduan soal resmi teori
-│   ├── TK1-W7-S15-R3 - Jawab.docx             # Lembar jawaban laporan DCCA
 │   ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi DCCA
-│   ├── soal1.c                                # Source code implementasi Struct & Union
-│   ├── soal2_fixed.c                          # Source code sorting yang diperbaiki
-│   └── readme.md                              # Dokumentasi teknis khusus DCCA
+│   ├── DRAFT_LAPORAN_DCCA.md                  # Panduan template isi laporan DCCA
+│   ├── soal1.c                                # Starter code Struct & Union katalog buku/majalah
+│   ├── soal2_fixed.c                          # Starter code perbaikan algoritma sorting
+│   └── readme.md                              # Dokumentasi teknis & tautan cloud DCCA
 │
 └── ACCA/                                      # [Sesi Lab / Praktikum] - Kelas ACCA - LAB
     ├── Tugas Praktikum 2 (Kelompok)...docx   # Panduan soal resmi praktikum
-    ├── Tugas Praktikum 2 - Jawab.docx         # Lembar jawaban laporan ACCA
     ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi ACCA
-    ├── tugas2a.c                              # Program: Data Pegawai & Gaji Pokok (Struct)
-    ├── tugas2b.c                              # Program: Total Gaji Bulanan + Lembur
-    ├── tugas2c.c                              # Program: Diskon 5% & Kupon Hadiah Belanja
-    └── README.md                              # Dokumentasi teknis khusus ACCA
+    ├── DRAFT_LAPORAN_ACCA.md                  # Panduan template isi laporan ACCA
+    ├── tugas2a.c                              # Starter code Data Pegawai & Gaji Pokok (Struct)
+    ├── tugas2b.c                              # Starter code Total Gaji Bulanan + Lembur
+    ├── tugas2c.c                              # Starter code Diskon 5% & Kupon Hadiah Belanja
+    └── README.md                              # Dokumentasi teknis & tautan cloud ACCA
 ```
 
 ---
