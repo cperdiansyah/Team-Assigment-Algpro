@@ -46,7 +46,7 @@ Team-Assigment-Algpro/
 │   ├── TK1-W7-S15-R3.docx                     # Panduan soal resmi teori
 │   ├── docs/                                  # Modul PDF resmi Lecture (LN04, LN05, LN06, LN07)
 │   ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi DCCA
-│   ├── DRAFT_LAPORAN_DCCA.md                  # Panduan template isi laporan DCCA
+│   ├── CHECKLIST.md                           # Checklist & action plan pengerjaan DCCA
 │   ├── soal1.c                                # Starter code Struct & Union katalog buku/majalah
 │   ├── soal2_fixed.c                          # Starter code perbaikan algoritma sorting
 │   └── readme.md                              # Dokumentasi teknis & tautan cloud DCCA
@@ -55,10 +55,11 @@ Team-Assigment-Algpro/
     ├── Tugas Praktikum 2 (Kelompok)...docx   # Panduan soal resmi praktikum
     ├── docs/                                  # Modul PDF resmi Binus (LN01, LN02, Praktikum 2 & 3)
     ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi ACCA
-    ├── DRAFT_LAPORAN_ACCA.md                  # Panduan template isi laporan ACCA
+    ├── CHECKLIST.md                           # Checklist & action plan pengerjaan ACCA
+    ├── tugas2c-haicola.md                     # Dokumentasi lengkap sesi HAICOLA Tugas 2C (Siap Copy)
     ├── tugas2a.c                              # Starter code Data Pegawai & Gaji Pokok (Struct)
     ├── tugas2b.c                              # Starter code Total Gaji Bulanan + Lembur
-    ├── tugas2c.c                              # Starter code Diskon 5% & Kupon Hadiah Belanja
+    ├── tugas2c.c                              # Program selesai: Diskon 5% & Kupon Hadiah Belanja
     └── README.md                              # Dokumentasi teknis & tautan cloud ACCA
 ```
 
@@ -124,7 +125,7 @@ Berikut adalah 5 opsi peran yang siap dipilih oleh masing-masing anggota:
 ### 🔹 Paket E (Role 5): Technical Writer & AI Ethics Officer
 * **Karakter Peran:** Cocok untuk yang menyukai dokumentasi teknis, pengujian interaksi dengan AI (Prompt Engineering), penyusunan refleksi, dan kepatuhan akademik.
 * **Tanggung Jawab di DCCA (Perpustakaan):**
-  - Mengompilasi seluruh jawaban Soal 1 dan Soal 2 ke dalam naskah laporan `TK1-W7-S15-R3 - Jawab.docx`.
+  - Mengompilasi seluruh jawaban Soal 1 dan Soal 2 ke dalam lembar jawaban Word Online (SharePoint).
   - Memastikan format referensi/sitasi akademik sesuai ketentuan (*Nama Sumber, Tautan, Tanggal Akses*).
 * **Tanggung Jawab di ACCA (Supermarket):**
   - **Soal 2D HAICOLA (AI Prompting & Reflection):**

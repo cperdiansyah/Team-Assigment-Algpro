@@ -8,7 +8,7 @@
 ---
 
 ## 📚 Pedoman Koding Sesuai Silabus Lecture (Lokal DCCA)
-Pengerjaan tugas DCCA **wajib merujuk pada materi perkuliahan Lecture** di folder lokal [`DCCA/docs/`](file:///c:/Users/chan/Documents/Binus/Sesemester%201%20-%20P1/Algoritma%20&%20Pemrograman/Team-Assigment-Algpro/DCCA/docs):
+Pengerjaan tugas DCCA **wajib merujuk pada materi perkuliahan Lecture** di folder lokal [`DCCA/docs/`](docs):
 1. **LN07 - Structures and Union:**
    - Bagian 7.1 & 7.2: Deklarasi `struct` dan penggunaan `typedef` untuk menyederhanakan tipe.
    - Bagian 7.3: Deklarasi `union` dan konsep *shared memory* (ukuran union = anggota terbesarnya).
@@ -85,6 +85,13 @@ Kepala perpustakaan, Ibu Arini, membutuhkan prototipe sistem katalog digital unt
 
 ---
 
+## ✅ Action Checklist & TODO Tim DCCA
+
+Checklist langkah kerja teknis dan pemantauan deliverable modul DCCA telah dipisahkan ke berkas khusus agar README tetap ringkas dan fokus:  
+👉 📋 [**Buka Checklist & Action Plan DCCA (CHECKLIST.md)**](CHECKLIST.md)
+
+---
+
 ## 🌐 Lembar Jawaban Cloud (Live Collaboration)
 
 Laporan DCCA dikerjakan bersama di Word Online untuk menghindari konflik file Word offline di Git:  
@@ -99,7 +106,7 @@ DCCA/
 ├── TK1-W7-S15-R3.docx                 # Panduan soal resmi dari dosen
 ├── docs/                              # Modul perkuliahan Lecture (LN04, LN05, LN06, LN07)
 ├── AI_Usage_Declaration_Form_EN.docx  # Formulir pernyataan pemanfaatan AI resmi
-├── DRAFT_LAPORAN_DCCA.md              # Template checklist & panduan isi laporan
+├── CHECKLIST.md                       # Checklist & action plan detail per sub-tugas
 ├── soal1.c                            # Starter code program katalog struct & union
 ├── soal2_fixed.c                      # Starter code program sorting yang diperbaiki
 └── readme.md                          # Panduan modul DCCA ini
