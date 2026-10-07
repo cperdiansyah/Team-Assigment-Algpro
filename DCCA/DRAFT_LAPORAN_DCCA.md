@@ -77,5 +77,8 @@ void sort(int arr[], int n) {
 ---
 
 ## 📚 DAFTAR REFERENSI
-*(Diisi oleh PIC Dokumentasi)*
-- Format sitasi: *Nama Penulis/Sumber, Judul Artikel/Buku, URL (jika ada), Tanggal Akses.*
+*(Diisi oleh PIC Dokumentasi — disesuaikan dengan materi di DCCA/docs/)*:
+1. Pambudi, P. D. L. (2026). *LN07: Structures and Union*. Lecture Notes Algorithm and Programming (COMP6112036). Binus Online.
+2. Binus Online. (2026). *LN05: Pointers and Array*. Algorithm and Programming (COMP6112036).
+3. Binus Online. (2026). *LN04: Program Control: Selection and Repetition*. Algorithm and Programming (COMP6112036).
+4. Deitel, P. J., & Deitel, H. (2022). *C How to Program (9th Edition)*. Pearson Education. Chapter 10: Structures, Unions, Bit Manipulation and Enumerations.

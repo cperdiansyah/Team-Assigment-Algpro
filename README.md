@@ -44,6 +44,7 @@ Team-Assigment-Algpro/
 │
 ├── DCCA/                                      # [Sesi Lecture / Teori] - Kelas DCCA - LEC
 │   ├── TK1-W7-S15-R3.docx                     # Panduan soal resmi teori
+│   ├── docs/                                  # Modul PDF resmi Lecture (LN04, LN05, LN06, LN07)
 │   ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi DCCA
 │   ├── DRAFT_LAPORAN_DCCA.md                  # Panduan template isi laporan DCCA
 │   ├── soal1.c                                # Starter code Struct & Union katalog buku/majalah
@@ -52,6 +53,7 @@ Team-Assigment-Algpro/
 │
 └── ACCA/                                      # [Sesi Lab / Praktikum] - Kelas ACCA - LAB
     ├── Tugas Praktikum 2 (Kelompok)...docx   # Panduan soal resmi praktikum
+    ├── docs/                                  # Modul PDF resmi Binus (LN01, LN02, Praktikum 2 & 3)
     ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi ACCA
     ├── DRAFT_LAPORAN_ACCA.md                  # Panduan template isi laporan ACCA
     ├── tugas2a.c                              # Starter code Data Pegawai & Gaji Pokok (Struct)
@@ -59,6 +61,9 @@ Team-Assigment-Algpro/
     ├── tugas2c.c                              # Starter code Diskon 5% & Kupon Hadiah Belanja
     └── README.md                              # Dokumentasi teknis & tautan cloud ACCA
 ```
+
+> 📖 **Pedoman Silabus (Anti-Overengineered):**  
+> Seluruh anggota tim diimbau untuk menulis kode bahasa C yang **murni merujuk pada materi di folder `ACCA/docs/`** (`printf`, `scanf`, `if-else`, `struct`, `strcmp`). Jangan menggunakan trik sintaks rumit yang belum diajarkan agar nilai tugas dinilai wajar dan natural oleh dosen/aslab!
 
 ---
 

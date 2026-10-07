@@ -7,6 +7,20 @@
 
 ---
 
+## 📚 Pedoman Koding Sesuai Silabus Lecture (Lokal DCCA)
+Pengerjaan tugas DCCA **wajib merujuk pada materi perkuliahan Lecture** di folder lokal [`DCCA/docs/`](file:///c:/Users/chan/Documents/Binus/Sesemester%201%20-%20P1/Algoritma%20&%20Pemrograman/Team-Assigment-Algpro/DCCA/docs):
+1. **LN07 - Structures and Union:**
+   - Bagian 7.1 & 7.2: Deklarasi `struct` dan penggunaan `typedef` untuk menyederhanakan tipe.
+   - Bagian 7.3: Deklarasi `union` dan konsep *shared memory* (ukuran union = anggota terbesarnya).
+   - Bagian 7.5: Penggunaan `enum` untuk penanda tipe media (Buku/Majalah).
+   - Bagian 7.6 (HAICOLA Skenario 2): Analisis perbedaan alokasi memori `struct` vs `union`.
+2. **LN05 - Pointers and Array & LN06 - Function:**
+   - Manipulasi array dan pembuatan fungsi modular `sort()`.
+3. **LN04 - Program Control (Selection & Repetition):**
+   - Logika nested loop `for` dan percabangan `if-else` untuk sorting dan input data.
+
+---
+
 ## 📖 Ringkasan Studi Kasus
 **Studi Kasus: Perpustakaan Digital Lentera Nusantara**  
 Kepala perpustakaan, Ibu Arini, membutuhkan prototipe sistem katalog digital untuk mengelola koleksi **Buku** dan **Majalah**. Mengingat keterbatasan memori server awal, sistem harus dirancang sehemat mungkin menggunakan bahasa C, serta memperbaiki algoritma sorting lama yang bermasalah dalam mengurutkan tahun terbit koleksi.
@@ -83,6 +97,7 @@ Laporan DCCA dikerjakan bersama di Word Online untuk menghindari konflik file Wo
 ```text
 DCCA/
 ├── TK1-W7-S15-R3.docx                 # Panduan soal resmi dari dosen
+├── docs/                              # Modul perkuliahan Lecture (LN04, LN05, LN06, LN07)
 ├── AI_Usage_Declaration_Form_EN.docx  # Formulir pernyataan pemanfaatan AI resmi
 ├── DRAFT_LAPORAN_DCCA.md              # Template checklist & panduan isi laporan
 ├── soal1.c                            # Starter code program katalog struct & union

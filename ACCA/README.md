@@ -1,9 +1,19 @@
 # 🛒 ACCA — Tugas Praktikum 2 (Team Assignment 1) - Week 7
 **Mata Kuliah:** Algorithm and Programming (COMP6112036)  
 **Kelas:** ACCA - LAB  
-**Teaching Assistant / Aslab:** CS015 - ACHMAD ALIF NASRULLOH  
+**Dosen Pengampu:** CS015 - ACHMAD ALIF NASRULLOH (Teaching Assistant / Aslab)  
 **Kelompok:** Group 1  
 **Topik Utama:** Struct, Selection, Arithmetic Operators, Function, dan Validasi AI (HAICOLA)  
+
+---
+
+## 📚 Pedoman Koding Sesuai Silabus (Anti-Overengineered)
+Seluruh pengerjaan tugas ACCA **wajib merujuk pada materi resmi perkuliahan** yang ada di folder [`ACCA/docs/`](file:///c:/Users/chan/Documents/Binus/Sesemester%201%20-%20P1/Algoritma%20&%20Pemrograman/Team-Assigment-Algpro/ACCA/docs):
+1. **Modul LN02:** Formatted Input/Output (`printf()`, `scanf()`, format specifier `%d`, `%s`, `%f`).
+2. **Modul Praktikum 2:** Kontrol seleksi (`if`, `else if`, `else`) dan perbandingan string (`strcmp()`).
+3. **Modul Praktikum 3:** Deklarasi dan pemanggilan `struct` sederhana menggunakan operator titik (`.`).
+4. **Modul Week 4:** Operasi aritmatika dasar (`/` integer division untuk pembulatan kupon, `*` perkalian upah lembur/diskon).
+> ⚠️ **Catatan Penting:** Hindari menggunakan fungsi rumit/eksternal yang belum diajarkan di kelas (misal: regex, custom string formatting ribet) agar kode dinilai natural dan sesuai capaian pembelajaran (LO).
 
 ---
 

@@ -81,6 +81,11 @@
 
 ---
 
-## 📑 DAFTAR LAMPIRAN
+## 📑 DAFTAR LAMPIRAN & REFERENSI
 1. Berkas Formulir `AI_Usage_Declaration_Form_EN.docx` (Diisi dan ditandatangani oleh Chandra Perdiansyah).
 2. Tiga berkas source code: `tugas2a.c`, `tugas2b.c`, dan `tugas2c.c`.
+3. **Referensi Materi Kuliah (ACCA/docs):**
+   - Binus Online. (2026). *LN02: Formatted Input and Output*. Algorithm and Programming (COMP6112036).
+   - Binus Online. (2026). *Modul Praktikum 2: Program Control, Selection, Repetition & Pointer*.
+   - Binus Online. (2026). *Modul Praktikum 3: Structures, Union, Function, Searching & Sorting*.
+   - Deitel, P., & Deitel, H. (2022). *C How to Program (9th Edition)*. Pearson Education.
