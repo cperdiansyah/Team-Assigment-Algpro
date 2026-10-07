@@ -4,14 +4,19 @@
  * Studi Kasus  : Perpustakaan Digital Lentera Nusantara
  * Topik        : Debugging dan Analisis Program Sorting
  * Mata Kuliah  : Algorithm and Programming (COMP6112036) - DCCA
+ * Kelas        : DCCA - LEC
  * Kelompok     : Group 1
  * ============================================================================
+ * MATERI YANG DITERAPKAN (SESUAI SILABUS BINUS):
+ * - Modul Praktikum 3 Halaman 5: "Bubble Sort Implementation"
+ *
  * PETUNJUK PENGERJAAN:
  * Di bawah ini adalah kode fungsi sorting lama milik Ibu Arini yang masih ada bug.
  * Tugas PIC Soal 2:
  * 1. Analisis mengapa potongan loop 'for (j = 0; j < n; j++)' dan kondisi
  *    'if (arr[j] > arr[i])' menghasilkan urutan yang keliru.
- * 2. Perbaiki fungsi sort() di bawah agar array tahun terbit terurut menaik (Ascending).
+ * 2. Perbaiki fungsi sort() di bawah menggunakan algoritma Bubble Sort yang valid
+ *    (Lihat referensi Modul Praktikum 3 Halaman 5).
  * ============================================================================
  */
 
@@ -31,17 +36,23 @@
 //     }
 // }
 
-// TODO: Perbaiki fungsi sort di bawah ini (misal menggunakan Bubble Sort atau Selection Sort yang valid)
+// TODO: Perbaiki fungsi sort di bawah ini menggunakan Bubble Sort yang valid
+// Referensi: Modul Praktikum 3 Halaman 5:
+// for (int i = 0; i < n - 1; i++) {
+//     for (int j = 0; j < n - i - 1; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//             int temp = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = temp;
+//         }
+//     }
+// }
 void sort(int arr[], int n) {
     int i, j, temp;
 
-    // Petunjuk Bubble Sort:
-    // Outer loop  : for (i = 0; i < n - 1; i++)
-    // Inner loop  : for (j = 0; j < n - 1 - i; j++)
-    // Perbandingan: if (arr[j] > arr[j + 1]) -> swap
+    // [Tuliskan kode perbaikan logika Bubble Sort kalian di sini]
 
-    // [Tuliskan kode perbaikan logika sorting kalian di sini]
-    (void)i; (void)j; (void)temp; (void)arr; (void)n; // Placeholder agar compile tanpa warning
+    (void)i; (void)j; (void)temp; (void)arr; (void)n; // Placeholder bebas warning
 }
 
 void cetak_array(const int arr[], int n) {
@@ -52,7 +63,7 @@ void cetak_array(const int arr[], int n) {
 }
 
 int main(void) {
-    // Array tahun terbit koleksi sesuai soal
+    // Array tahun terbit koleksi perpustakaan sesuai soal
     int arr[] = {64, 34, 25, 12, 22};
     int n = sizeof(arr) / sizeof(arr[0]);
 

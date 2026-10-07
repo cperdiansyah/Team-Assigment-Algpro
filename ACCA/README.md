@@ -1,9 +1,19 @@
 # 🛒 ACCA — Tugas Praktikum 2 (Team Assignment 1) - Week 7
 **Mata Kuliah:** Algorithm and Programming (COMP6112036)  
 **Kelas:** ACCA - LAB  
-**Teaching Assistant / Aslab:** CS015 - ACHMAD ALIF NASRULLOH  
+**Dosen Pengampu:** CS015 - ACHMAD ALIF NASRULLOH (Teaching Assistant / Aslab)  
 **Kelompok:** Group 1  
 **Topik Utama:** Struct, Selection, Arithmetic Operators, Function, dan Validasi AI (HAICOLA)  
+
+---
+
+## 📚 Pedoman Koding Sesuai Silabus (Anti-Overengineered)
+Seluruh pengerjaan tugas ACCA **wajib merujuk pada materi resmi perkuliahan** yang ada di folder [`ACCA/docs/`](docs):
+1. **Modul LN02:** Formatted Input/Output (`printf()`, `scanf()`, format specifier `%d`, `%s`, `%f`).
+2. **Modul Praktikum 2:** Kontrol seleksi (`if`, `else if`, `else`) dan perbandingan string (`strcmp()`).
+3. **Modul Praktikum 3:** Deklarasi dan pemanggilan `struct` sederhana menggunakan operator titik (`.`).
+4. **Modul Week 4:** Operasi aritmatika dasar (`/` integer division untuk pembulatan kupon, `*` perkalian upah lembur/diskon).
+> ⚠️ **Catatan Penting:** Hindari menggunakan fungsi rumit/eksternal yang belum diajarkan di kelas (misal: regex, custom string formatting ribet) agar kode dinilai natural dan sesuai capaian pembelajaran (LO).
 
 ---
 
@@ -64,6 +74,13 @@ Supermarket Nusantara Sejahtera membutuhkan pengembangan dua sistem:
 
 ---
 
+## ✅ Action Checklist & TODO Tim ACCA
+
+Checklist langkah kerja teknis dan pemantauan deliverable modul ACCA telah dipisahkan ke berkas khusus agar README tetap ringkas dan fokus:  
+👉 📋 [**Buka Checklist & Action Plan ACCA (CHECKLIST.md)**](CHECKLIST.md)
+
+---
+
 ## 🌐 Lembar Jawaban Cloud (Live Collaboration)
 
 Laporan Praktikum ACCA dikerjakan bersama di Word Online untuk menghindari konflik file Word offline di Git:  
@@ -76,11 +93,13 @@ Laporan Praktikum ACCA dikerjakan bersama di Word Online untuk menghindari konfl
 ```text
 ACCA/
 ├── Tugas Praktikum 2 (Kelompok)...docx   # Panduan soal resmi praktikum
+├── docs/                                  # Modul PDF resmi Binus (LN01, LN02, Praktikum 2 & 3)
 ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi ACCA
-├── DRAFT_LAPORAN_ACCA.md                  # Template checklist & panduan isi laporan
+├── CHECKLIST.md                           # Checklist & action plan detail per sub-tugas
+├── tugas2c-haicola.md                     # Dokumentasi lengkap sesi HAICOLA Tugas 2C (Siap Copy)
 ├── tugas2a.c                              # Starter code data pegawai (Struct)
 ├── tugas2b.c                              # Starter code gaji bulanan + jam lembur
-├── tugas2c.c                              # Starter code diskon belanja 5% & kupon undian
+├── tugas2c.c                              # Program selesai: diskon belanja 5% & kupon undian
 └── README.md                              # Dokumentasi teknis & tautan cloud ACCA ini
 ```
 
