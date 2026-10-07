@@ -53,3 +53,25 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# ================================
+# IDE & Editor Specific
+# ================================
+# JetBrains / CLion
+.idea/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# ================================
+# Temporary & Office Lock Files
+# ================================
+~$*
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
