@@ -60,12 +60,12 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
 
 ### 3. Tugas 2C: Program Hadiah Belanja & Diskon Pelanggan (Bobot 30%)
 *PIC: Chandra / Paket D (Role 4)*
-- [] **Koding (`ACCA/tugas2c.c`):** *(SELESAI)*
-  - [] Input total transaksi belanja (validasi nilai > 0).
-  - [] Perhitungan kupon undian kelipatan Rp 100.000 menggunakan pembulatan ke bawah (*integer division* `/ 100000`).
-  - [] Perhitungan diskon 5% untuk pembelian minimal Rp 100.000.
-  - [] Tampilkan struk/output rincian pembelian sesuai mockup soal.
-  - [] Kompilasi & testing: Lolos uji tanpa warning (`gcc -Wall -Wextra`).
+- [x] **Koding (`ACCA/tugas2c.c`):** *(SELESAI)*
+  - [x] Input total transaksi belanja (validasi nilai > 0).
+  - [x] Perhitungan kupon undian kelipatan Rp 100.000 menggunakan pembulatan ke bawah (*integer division* `/ 100000`).
+  - [x] Perhitungan diskon 5% untuk pembelian minimal Rp 100.000.
+  - [x] Tampilkan struk/output rincian pembelian sesuai mockup soal.
+  - [x] Kompilasi & testing: Lolos uji tanpa warning (`gcc -Wall -Wextra`).
 - [ ] **Laporan Word Online (SharePoint):**
   - [ ] Tuliskan penjelasan mekanisme pembulatan ke bawah (*floor*) dan aturan diskon.
   - [ ] Tangkap layar hasil run `tugas2c.exe` (contoh: belanja Rp 250.000 -> 2 kupon, diskon Rp 12.500, bayar Rp 237.500).
