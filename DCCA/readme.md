@@ -40,7 +40,7 @@ Kepala perpustakaan, Ibu Arini, membutuhkan prototipe sistem katalog digital unt
   1. Penjelasan konsep arsitektur `struct` dan `union` yang diusulkan.
   2. Flowchart alur input data, percabangan pemilihan jenis media, dan tampilan output.
   3. Analisis teoritis keunggulan dan perhitungan penghematan memori (`memory footprint`) penggunaan `union` dibanding `struct` biasa.
-  4. Implementasi kode bahasa C (`soal1.c`).
+  4. Implementasi kode bahasa C (`question_1.c`).
 
 ### 2. Soal 2: Debug dan Analisis Program Sorting Perpustakaan (Bobot 40%)
 * **Deskripsi:** Menemukan bug, menganalisis, dan memperbaiki fungsi sorting lama milik Ibu Arini untuk mengurutkan tahun terbit:
@@ -61,7 +61,7 @@ Kepala perpustakaan, Ibu Arini, membutuhkan prototipe sistem katalog digital unt
 * **Array Uji:** `{64, 34, 25, 12, 22}`
 * **Deliverable Soal 2:**
   1. Penjelasan analisis letak kesalahan logika (Root Cause Analysis).
-  2. Kode C fungsi sorting yang sudah diperbaiki secara benar (`soal2_fixed.c`).
+  2. Kode C fungsi sorting yang sudah diperbaiki secara benar (`question_2_fixed.c`).
   3. Flowchart logika alur sorting yang benar.
 
 ---
@@ -72,11 +72,11 @@ Kepala perpustakaan, Ibu Arini, membutuhkan prototipe sistem katalog digital unt
 
 | Sub-Tugas DCCA | Deskripsi Deliverable | Role Terkait | PIC (Nama Anggota) | Status |
 |---|---|:---:|:---:|:---:|
-| **Soal 1 — Kode C** | Penulisan kode C `soal1.c` (Struct & Union katalog) | **Paket B (Role 2)** | *[Open Slot]* | [ ] Belum |
+| **Soal 1 — Kode C** | Penulisan kode C `question_1.c` (Struct & Union katalog) | **Paket B (Role 2)** | *[Open Slot]* | [ ] Belum |
 | **Soal 1 — Flowchart** | Diagram alir proses input, percabangan media, & output | **Paket B (Role 2)** | *[Open Slot]* | [ ] Belum |
 | **Soal 1 — Analisis Memori** | Penjelasan teoritis efisiensi memori Union vs Struct biasa | **Paket D (Role 4)** | *[Open Slot]* | [ ] Belum |
 | **Soal 2 — Analisis RCA Bug** | Penjelasan detail letak kesalahan logika sorting lama | **Paket C (Role 3)** | *[Open Slot]* | [ ] Belum |
-| **Soal 2 — Kode C Perbaikan** | Penulisan kode C `soal2_fixed.c` (Sorting yang benar) | **Paket C (Role 3)** | *[Open Slot]* | [ ] Belum |
+| **Soal 2 — Kode C Perbaikan** | Penulisan kode C `question_2_fixed.c` (Sorting yang benar) | **Paket C (Role 3)** | *[Open Slot]* | [ ] Belum |
 | **Soal 2 — Flowchart Sorting** | Diagram alir proses algoritma sorting yang benar | **Paket D (Role 4)** | *[Open Slot]* | [ ] Belum |
 | **Kompilasi Laporan DCCA** | Pengisian laporan di Word Online (SharePoint) | **Paket E (Role 5)** | *[Open Slot]* | [ ] Belum |
 | **Format Sitasi & Referensi** | Standardisasi format sitasi dan sumber referensi | **Paket E (Role 5)** | *[Open Slot]* | [ ] Belum |

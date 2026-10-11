@@ -50,9 +50,19 @@
 void sort(int arr[], int n) {
     int i, j, temp;
 
-    // [Tuliskan kode perbaikan logika Bubble Sort kalian di sini]
-
-    (void)i; (void)j; (void)temp; (void)arr; (void)n; // Placeholder bebas warning
+    // Perbaikan Algoritma: Bubble Sort Standar (Modul Praktikum 3 Hal. 5)
+    // 1. Outer loop berjalan n-1 kali
+    // 2. Inner loop hanya memproses elemen hingga n - i - 1 (melewati elemen yang sudah terurut di kanan)
+    // 3. Perbandingan bertetangga arr[j] > arr[j + 1] menukar jika elemen kiri lebih besar
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
 }
 
 void cetak_array(const int arr[], int n) {

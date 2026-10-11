@@ -57,14 +57,18 @@ int main(void) {
     // TODO 1: Implementasikan input data pegawai
     // Catatan Materi LN02:
     // - Gunakan scanf("%s", ...) untuk satu kata atau scanf(" %[^\n]", ...) / fgets() untuk teks berspasi
-    printf("Masukan NIP     : "); scanf ("%s",p.nip);
-    printf("Masukkan Nama   : "); scanf (" %[^\n]",p.nama);
-    printf("Masukkan Alamat : "); scanf (" %[^\n]",p.alamat);
-    printf("Masukkan No HP  : "); scanf (" %s",p.no_hp);
-    printf("Masukkan Jabatan: "); scanf (" %[^\n]",p.jabatan);
-    printf("Masukkan Golongan (D1/D2/D3): "); scanf ("%s", p.golongan);
+    printf("Masukkan NIP    : "); scanf(" %19s", p.nip);
+    printf("Masukkan Nama   : "); scanf(" %49[^\n]", p.nama);
+    printf("Masukkan Alamat : "); scanf(" %99[^\n]", p.alamat);
+    printf("Masukkan No HP  : "); scanf(" %19s", p.no_hp);
+    printf("Masukkan Jabatan: "); scanf(" %29[^\n]", p.jabatan);
+    printf("Masukkan Golongan (D1/D2/D3): "); scanf(" %4s", p.golongan);
     // TODO 2: Tentukan gaji pokok secara otomatis
     p.gaji_pokok = tentukan_gaji_pokok(p.golongan);
+    if (p.gaji_pokok == 0) {
+        printf("\nPeringatan: Golongan '%s' tidak valid! Harap masukkan D1, D2, atau D3.\n", p.golongan);
+        return 1;
+    }
 
     // TODO 3: Tampilkan seluruh profil pegawai dan gaji pokoknya
     printf("\n=== DATA LENGKAP PEGAWAI ===\n");
