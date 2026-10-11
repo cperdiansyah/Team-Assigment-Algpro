@@ -40,10 +40,10 @@ typedef struct {
 // Fungsi untuk menentukan gaji pokok berdasarkan golongan (Modul Praktikum 2)
 int tentukan_gaji_pokok(const char *golongan) {
     // Petunjuk: Gunakan perbandingan string strcmp() seperti di Modul Praktikum 2
-    // if (strcmp(golongan, "D1") == 0) return 3000000;
-    // else if (strcmp(golongan, "D2") == 0) return 2500000;
-    // else if (strcmp(golongan, "D3") == 0) return 2000000;
-    (void)golongan;
+    if (strcmp(golongan, "D1") == 0) return 3000000;
+    else if (strcmp(golongan, "D2") == 0) return 2500000;
+    else if (strcmp(golongan, "D3") == 0) return 2000000;
+    
     return 0; // Ganti dengan logika di atas
 }
 
@@ -57,14 +57,24 @@ int main(void) {
     // TODO 1: Implementasikan input data pegawai
     // Catatan Materi LN02:
     // - Gunakan scanf("%s", ...) untuk satu kata atau scanf(" %[^\n]", ...) / fgets() untuk teks berspasi
-    printf("[TODO: Minta input data pegawai (NIP, Nama, Alamat, No HP, Jabatan, Golongan)]\n");
-
+    printf("Masukan NIP     : "); scanf ("%s",p.nip);
+    printf("Masukkan Nama   : "); scanf (" %[^\n]",p.nama);
+    printf("Masukkan Alamat : "); scanf (" %[^\n]",p.alamat);
+    printf("Masukkan No HP  : "); scanf (" %s",p.no_hp);
+    printf("Masukkan Jabatan: "); scanf (" %[^\n]",p.jabatan);
+    printf("Masukkan Golongan (D1/D2/D3): "); scanf ("%s", p.golongan);
     // TODO 2: Tentukan gaji pokok secara otomatis
     p.gaji_pokok = tentukan_gaji_pokok(p.golongan);
 
     // TODO 3: Tampilkan seluruh profil pegawai dan gaji pokoknya
     printf("\n=== DATA LENGKAP PEGAWAI ===\n");
-    printf("[TODO: Tampilkan profil lengkap pegawai dan gaji pokok dengan printf]\n");
+    printf("NIP         = %s\n", p.nip);
+    printf("Nama        = %s\n", p.nama);
+    printf("Alamat      = %s\n", p.alamat);
+    printf("No HP       = %s\n", p.no_hp);
+    printf("Jabatan     = %s\n", p.jabatan);
+    printf("Golongan    = %s\n", p.golongan);
+    printf("Gaji Pokok  = Rp %d\n", p.gaji_pokok);
 
     return 0;
 }
