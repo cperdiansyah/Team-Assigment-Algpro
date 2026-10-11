@@ -81,7 +81,7 @@ Mohon jelaskan Root Cause Analysis (RCA) letak kesalahan logikanya secara runut,
 
 ### 4. ✅ Perubahan Nyata pada Kode Setelah Konsultasi AI (Hasil Perbaikan)
 
-Berikut adalah kode yang telah disempurnakan dan diterapkan pada berkas `DCCA/soal2_fixed.c`:
+Berikut adalah kode yang telah disempurnakan dan diterapkan pada berkas `question_2_fixed.c`:
 
 ```c
 // ========================================================
@@ -138,4 +138,4 @@ int main(void) {
 
 ### 5. 📝 Refleksi Singkat (4 Kalimat)
 
-> Melalui interaksi bersama AI Code Assistant, kami dapat membedah letak cacat logika (*root cause analysis*) pada kode sorting lama Ibu Arini yang melakukan pertukaran nilai referensi secara prematur sehingga merusak keterurutan elemen array. Kami mempelajari bahwa algoritma Bubble Sort yang valid harus mengevaluasi dua elemen bertetangga (`arr[j]` dan `arr[j + 1]`) serta memperpendek batas iterasi loop dalam (`n - i - 1`) di setiap putaran. Sebagai perbaikan konkret pada `soal2_fixed.c`, kami merestrukturisasi nested loop dan kondisi percabangan sehingga array `{64, 34, 25, 12, 22}` berhasil terurut sempurna menjadi `{12, 22, 25, 34, 64}`. Pemanfaatan AI ini sangat efektif dalam mempercepat penelusuran alur tracing bug logika tanpa menggantikan proses implementasi kode mandiri oleh tim.
+> Melalui interaksi bersama AI Code Assistant, kami dapat membedah letak cacat logika (*root cause analysis*) pada kode sorting lama Ibu Arini yang melakukan pertukaran nilai referensi secara prematur sehingga merusak keterurutan elemen array. Kami mempelajari bahwa algoritma Bubble Sort yang valid harus mengevaluasi dua elemen bertetangga (`arr[j]` dan `arr[j + 1]`) serta memperpendek batas iterasi loop dalam (`n - i - 1`) di setiap putaran. Sebagai perbaikan konkret pada `question_2_fixed.c`, kami merestrukturisasi nested loop dan kondisi percabangan sehingga array `{64, 34, 25, 12, 22}` berhasil terurut sempurna menjadi `{12, 22, 25, 34, 64}`. Pemanfaatan AI ini sangat efektif dalam mempercepat penelusuran alur tracing bug logika tanpa menggantikan proses implementasi kode mandiri oleh tim.

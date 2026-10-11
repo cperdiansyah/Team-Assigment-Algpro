@@ -11,11 +11,11 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
 
 | Sub-Tugas | File Deliverable | PIC (Anggota) | Status Pengerjaan |
 |---|---|:---:|:---:|
-| **Soal 1 — Kode C** | `DCCA/soal1.c` | *[Paket B / Role 2]* | 🟢 Selesai (Kode di Git) |
+| **Soal 1 — Kode C** | `question_1.c` | *[Paket B / Role 2]* | 🟢 Selesai (Kode di Git) |
 | **Soal 1 — Flowchart** | Diagram Gambar (Word) | *[Paket B / Role 2]* | 🟡 Menunggu Pembuatan |
 | **Soal 1 — Analisis Memori** | Teks Analisis (Word) | *[Paket D / Role 4]* | 🟡 Menunggu Pembuatan |
 | **Soal 2 — Analisis RCA Bug** | Teks Analisis (Word) | *[Paket C / Role 3]* | 🟢 Selesai di Word (Perlu Koreksi Minor) |
-| **Soal 2 — Kode C Perbaikan** | `DCCA/soal2_fixed.c` | *[Paket C / Role 3]* | 🟢 Selesai (Sinkron di Git) |
+| **Soal 2 — Kode C Perbaikan** | `question_2_fixed.c` | *[Paket C / Role 3]* | 🟢 Selesai (Sinkron di Git) |
 | **Soal 2 — Flowchart Sorting** | Diagram Gambar (Word) | *[Paket D / Role 4]* | 🟢 Selesai di Word (Link Canva) |
 | **Laporan & Referensi DCCA** | Lembar Word SharePoint | *[Paket E / Role 5]* | 🟡 Soal 2 Terisi, Soal 1 Masih Kosong |
 | **AI Declaration Form & QA** | `AI_Usage...docx` | *[Paket A & E]* | 🟡 Menunggu Finalisasi |
@@ -27,7 +27,7 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
 ### 1. Soal 1: Desain & Analisis Struct dan Union (Bobot 60%)
 *PIC: Paket B (Role 2) & Paket D (Role 4)*
 
-- [x] **Koding C (`DCCA/soal1.c`):**
+- [x] **Koding C (`question_1.c`):**
   - [x] Definisikan `struct InfoBuku` (penulis, jumlah halaman) dan `struct InfoMajalah` (nomor edisi, bulan terbit).
   - [x] Definisikan `union DetailMedia` yang membungkus `InfoBuku` dan `InfoMajalah`.
   - [x] Definisikan `struct ItemKatalog` yang memuat judul, tahun terbit, jenis media (`enum`), dan `DetailMedia`.
@@ -40,14 +40,14 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
   - [ ] Tuliskan analisis efisiensi memori:
     - Hitung ukuran byte `sizeof(InfoBuku)`, `sizeof(InfoMajalah)`, dan `sizeof(DetailMedia)`.
     - Bandingkan total ukuran memori jika menggunakan `struct` biasa vs `union` (tunjukkan persentase/penghematan byte).
-  - [ ] Salin source code `soal1.c` ke lembar jawaban.
+  - [ ] Salin source code `question_1.c` ke lembar jawaban.
 
 ---
 
 ### 2. Soal 2: Debugging & Analisis Sorting Koleksi (Bobot 40%)
 *PIC: Paket C (Role 3) & Paket D (Role 4)*
 
-- [x] **Koding C & Analisis Bug (`DCCA/soal2_fixed.c`):**
+- [x] **Koding C & Analisis Bug (`question_2_fixed.c`):**
   - [x] Lakukan Root Cause Analysis (RCA) pada fungsi sorting lama milik Ibu Arini:
     - Tracing manual kegagalan array pada iterasi terakhir: array menjadi `[12, 25, 34, 64, 22]`.
   - [x] Perbaiki fungsi `sort()` menggunakan Bubble Sort yang benar (`for i=0..n-1`, `for j=0..n-1-i`, `arr[j] > arr[j+1]`).
@@ -56,7 +56,7 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
   - [x] Tuliskan narasi penjelasan letak bug dan dampaknya terhadap array (sudah di Word).
   - [x] Buat dan tempelkan gambar **Flowchart Sorting Soal 2** (link Canva sudah di Word).
   - [x] Lampirkan screenshot output terminal eksekusi `soal2_fixed.exe` (sudah di Word).
-  - [x] Salin source code `soal2_fixed.c` ke lembar jawaban (sudah di Word).
+  - [x] Salin source code `question_2_fixed.c` ke lembar jawaban (sudah di Word).
   - [ ] *Action:* Koreksi salah ketik konsep di Word ("nilai dikiri lebih kecil" -> "lebih besar").
 
 ---
