@@ -59,24 +59,28 @@ void input_item(ItemKatalog *item) {
     // TODO 1: Implementasikan input Judul, Tahun Terbit, dan Pilihan Jenis Media
     printf("=== FORM INPUT KOLEKSI PERPUSTAKAAN ===\n");
     printf("Masukkan Judul Buku/Majalah : ");
-    scanf(" %[^\n]", item->judul);
+    scanf(" %99[^\n]", item->judul);
     printf("Masukkan Tahun Terbit       : ");
     scanf("%d", &item->tahun_terbit);
     printf("Pilih Jenis Media (1. Buku, 2. Majalah): ");
-    int pilihan;
-    scanf("%d", &pilihan);
+    int pilihan = 0;
+    while (scanf("%d", &pilihan) != 1 || (pilihan != MEDIA_BUKU && pilihan != MEDIA_MAJALAH)) {
+        printf("Pilihan tidak valid! Masukkan 1 untuk Buku atau 2 untuk Majalah: ");
+        // Bersihkan sisa buffer jika input non-angka
+        while (getchar() != '\n');
+    }
     item->tipe = (JenisMedia)pilihan;
 
     if (item->tipe == MEDIA_BUKU) {
         printf("Masukkan Nama Penulis       : ");
-        scanf(" %[^\n]", item->detail.buku.penulis);
+        scanf(" %49[^\n]", item->detail.buku.penulis);
         printf("Masukkan Jumlah Halaman     : ");
         scanf("%d", &item->detail.buku.jumlah_halaman);
-    } else {
+    } else if (item->tipe == MEDIA_MAJALAH) {
         printf("Masukkan Nomor Edisi        : ");
         scanf("%d", &item->detail.majalah.nomor_edisi);
         printf("Masukkan Bulan Terbit       : ");
-        scanf(" %[^\n]", item->detail.majalah.bulan_terbit);
+        scanf(" %19[^\n]", item->detail.majalah.bulan_terbit);
     }
     // Petunjuk:
     // Gunakan 'if (item->tipe == MEDIA_BUKU)' untuk input atribut buku

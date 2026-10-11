@@ -63,7 +63,7 @@ int main(void) {
         gaji_pokok = 2000000;
         tarif_lembur = 5000;
     } else {
-        printf("\ninputan tidak valid mohon memilih D1/D2/D3 .\n", golongan);
+        printf("\nInputan tidak valid! Golongan '%s' tidak ditemukan (mohon pilih D1/D2/D3).\n", golongan);
         return 1;
     }
 
