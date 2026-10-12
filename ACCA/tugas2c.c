@@ -16,11 +16,25 @@
  * 1. Input total pembelian (dalam Rupiah).
  * 2. Kupon undian: 1 kupon per kelipatan Rp 100.000,00 (pembulatan ke bawah via integer division).
  * 3. Diskon: 5% jika total pembelian minimal Rp 100.000,00.
+ *    Catatan: Teks narasi soal menyebut Rp 25.000 (10%), namun aturan resmi dan gambar
+ *    tangkapan layar soal (image5) menetapkan diskon 5% (Rp 12.500 dari Rp 250.000).
  * 4. Total yang harus dibayar: Total pembelian - diskon.
  * ============================================================================
  */
 
 #include <stdio.h>
+
+// Mencetak nominal dengan format Rupiah bertitik, contoh: Rp250.000
+void cetak_rupiah(int n) {
+    char buf[16];
+    int len = sprintf(buf, "%d", n);   // ubah angka jadi teks
+    printf("Rp");
+    for (int i = 0; i < len; i++) {
+        printf("%c", buf[i]);
+        int sisa = len - i - 1;        // sisa digit di kanan
+        if (sisa > 0 && sisa % 3 == 0) printf(".");
+    }
+}
 
 int main(void) {
     // Deklarasi variabel sesuai materi dasar tipe data C
@@ -53,10 +67,10 @@ int main(void) {
 
     // 5. Tampilkan rincian output sesuai format studi kasus
     printf("\nOutput:\n");
-    printf("Total pembelian     : Rp %d\n", total_pembelian);
+    printf("Total pembelian     : "); cetak_rupiah(total_pembelian); printf("\n");
     printf("Jumlah kupon undian : %d lembar\n", jumlah_kupon);
-    printf("Diskon              : Rp %d\n", diskon);
-    printf("Total dibayar       : Rp %d\n", total_dibayar);
+    printf("Diskon              : "); cetak_rupiah(diskon); printf("\n");
+    printf("Total dibayar       : "); cetak_rupiah(total_dibayar); printf("\n");
 
     return 0;
 }
