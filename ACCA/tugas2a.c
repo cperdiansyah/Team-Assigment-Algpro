@@ -68,7 +68,7 @@ int main(void) {
     printf("Masukkan Alamat     : "); scanf(" %99[^\n]", p.alamat);
     printf("Masukkan No HP      : "); scanf(" %19[^\n]", p.no_hp);
     printf("Masukkan Jabatan    : "); scanf(" %29[^\n]", p.jabatan);
-    printf("Masukkan Golongan   : "); scanf(" %4s", p.golongan);
+    printf("Masukkan Golongan (D1/D2/D3) : "); scanf(" %4s", p.golongan);
 
     // Normalisasi input golongan agar huruf kapital (misal d2 -> D2)
     for (int i = 0; p.golongan[i] != '\0'; i++) {
@@ -84,7 +84,7 @@ int main(void) {
 
     // 3. Tampilkan seluruh profil pegawai dan gaji pokoknya
     printf("\n=== DATA LENGKAP PEGAWAI ===\n");
-    printf("\nNIP = %s\n", p.nip);
+    printf("NIP = %s\n", p.nip);
     printf("Nama = %s\n", p.nama);
     printf("Alamat = %s\n", p.alamat);
     printf("No HP = %s\n", p.no_hp);
