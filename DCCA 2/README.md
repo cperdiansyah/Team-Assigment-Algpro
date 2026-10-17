@@ -46,7 +46,7 @@ DCCA 2/
 | 2 | **Anggota 2** | **Module: Tambah Data** | Salin `templates/template_tugas1_operasi.md` $\to$ beri nama `tugas1_tambah.md` | • Pseudocode Operasi Tambah Siswa<br>• Flowchart Operasi Tambah Siswa |
 | 3 | **Anggota 3** | **Module: Cari Data** | Salin `templates/template_tugas1_operasi.md` $\to$ beri nama `tugas1_cari.md` | • Pseudocode Operasi Cari Siswa (by NoReg)<br>• Flowchart Operasi Cari Siswa |
 | 4 | **Anggota 4** | **Module: Hapus Data** | Salin `templates/template_tugas1_operasi.md` $\to$ beri nama `tugas1_hapus.md` | • Pseudocode Operasi Hapus Siswa (metode Temp File)<br>• Flowchart Operasi Hapus Siswa |
-| 5 | **Anggota 5 (LN)** | **Module: Tugas 2 (Memori)**| `templates/template_tugas2_memory.md` & `src/question_2_fix.c` | • Analisis Root Cause (RCA) 5 bug kode asli<br>• Kode C perbaikan yang aman & tervalidasi<br>• Flowchart alur alokasi memori yang benar |
+| 5 | **Anggota 5** | **Module: Tugas 2 (Memori)**| `templates/template_tugas2_memory.md` & `src/question_2_fix.c` | • Analisis Root Cause (RCA) 5 bug kode asli<br>• Kode C perbaikan yang aman & tervalidasi<br>• Flowchart alur alokasi memori yang benar |
 
 ---
 
