@@ -1,26 +1,3 @@
-/**
- * ============================================================================
- * Program      : tugas2c.c
- * Studi Kasus  : Supermarket Nusantara Sejahtera
- * Topik        : Perhitungan Hadiah Belanja dan Diskon untuk Pelanggan
- * Mata Kuliah  : Algorithm and Programming (COMP6112036) - ACCA
- * Kelas        : ACCA - LAB
- * Kelompok     : Group 1
- * ============================================================================
- * MATERI YANG DITERAPKAN (SESUAI MODUL PRAKTIKUM BINUS):
- * 1. Formatted Input & Output  : scanf() dan printf() (Modul LN02)
- * 2. Operator & Aritmatika     : Integer division (/) dan perkalian (*) (Modul Week 4)
- * 3. Kontrol Program (Seleksi) : Percabangan if - else (Modul Praktikum 2)
- *
- * ATURAN STUDI KASUS:
- * 1. Input total pembelian (dalam Rupiah).
- * 2. Kupon undian: 1 kupon per kelipatan Rp 100.000,00 (pembulatan ke bawah via integer division).
- * 3. Diskon: 5% jika total pembelian minimal Rp 100.000,00.
- *    Catatan: Teks narasi soal menyebut Rp 25.000 (10%), namun aturan resmi dan gambar
- *    tangkapan layar soal (image5) menetapkan diskon 5% (Rp 12.500 dari Rp 250.000).
- * 4. Total yang harus dibayar: Total pembelian - diskon.
- * ============================================================================
- */
 
 #include <stdio.h>
 
@@ -57,8 +34,8 @@ int main(void) {
     // 3. Hitung diskon 5% menggunakan percabangan if-else (Modul Praktikum 2)
     // Diskon hanya diberikan jika total pembelian minimal Rp 100.000,00
     if (total_pembelian >= 100000) {
-        diskon = (int)(total_pembelian * 0.05); // 5% dari total pembelian awal
-    } else {
+        diskon = (total_pembelian * 5) / 100; // 5% dari total pembelian awal via aritmatika integer
+} else {
         diskon = 0;
     }
 

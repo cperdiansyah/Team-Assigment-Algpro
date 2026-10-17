@@ -1,24 +1,17 @@
-# 🤖 DOKUMENTASI HAICOLA — TUGAS 2C (HADIAH BELANJA & DISKON)
+# Soal 4 - Debugging
 **Mata Kuliah:** Algorithm and Programming (COMP6112036)  
 **Kelas:** ACCA - LAB  
 **Kelompok:** Group 1  
-**Topik Evaluasi:** Validasi Logika Pembulatan Kupon Undian (*Floor Division*), Diskon Belanja 5%, dan Format Mata Uang Rupiah (Tugas 2C)  
+**Topik:** Validasi Logika Pembulatan Kupon, Percabangan Diskon 5%, dan Format Cetak Rupiah (Tugas 2C)
 
 ---
 
-> 📌 **Catatan untuk Rekan Tim:**  
-> Berkas ini berisi dokumentasi lengkap sesi **HAICOLA (Human-AI Collaboration)** untuk modul **Tugas 2C**. Dokumen ini siap disalin ke lembar jawaban Word pada bagian **Soal 2D HAICOLA**.
+### 1. Potongan Kode Sebelum Konsultasi AI (Mengandung Potensi Bug)
 
----
-
-### 1. ⚠️ Potongan Kode Sebelum Konsultasi AI (Mengandung Potensi Bug)
-
-Pada penulisan awal logika perhitungan kupon dan diskon di `tugas2c.c`, kode ditulis sederhana tanpa validasi batas input, pembulatan yang rentan, serta tanpa format Rupiah:
+Pada penulisan awal logika perhitungan kupon dan diskon belanja di `tugas2c.c`, kode ditulis dengan variabel bertipe desimal, perhitungan diskon tanpa pengujian syarat batas belanja, serta pencetakan angka mentah:
 
 ```c
-// ========================================================
-// KODE SEBELUM KONSULTASI AI (Tugas 2C - Hadiah & Diskon)
-// ========================================================
+// Kode awal sebelum perbaikan
 float total_belanja;
 float kupon;
 float diskon;
@@ -27,65 +20,64 @@ float total_bayar;
 printf("Input total belanja: ");
 scanf("%f", &total_belanja);
 
-// Menghitung kupon dan diskon secara langsung
+// Masalah 1: Kupon menghasilkan nilai desimal (misal 2.5 lembar)
 kupon = total_belanja / 100000;
+
+// Masalah 2: Diskon langsung dihitung tanpa validasi minimum belanja Rp 100.000
 diskon = total_belanja * 0.05;
+
 total_bayar = total_belanja - diskon;
 
-printf("Jumlah kupon: %.1f lembar\n", kupon);
-printf("Diskon: Rp %.2f\n", diskon);
-printf("Total dibayar: Rp %.2f\n", total_bayar);
+// Masalah 3: Format output belum sesuai standar Rupiah bertitik
+printf("\nOutput:\n");
+printf("Total pembelian     : Rp %.0f\n", total_belanja);
+printf("Jumlah kupon undian : %.1f lembar\n", kupon);
+printf("Diskon              : Rp %.0f\n", diskon);
+printf("Total dibayar       : Rp %.0f\n", total_bayar);
 ```
 
-#### Masalah / Gejala Bug pada Kode Awal:
-1. **Kupon Berbentuk Pecahan Desimal:** Penggunaan tipe data `float` menghasilkan output kupon berupa pecahan desimal (misal: belanja Rp 250.000 menghasilkan `2.5 lembar`), padahal kupon fisik harus bilangan bulat utuh yang dibulatkan ke bawah (*floor* $\rightarrow$ 2 lembar).
-2. **Diskon Tetap Diberikan Walau Belanja di Bawah Rp 100.000:** Diskon langsung dikalikan $5\%$ tanpa mengecek syarat minimum belanja ($\ge$ Rp 100.000). Jika belanja hanya Rp 50.000, diskon tetap terpotong Rp 2.500.
-3. **Tidak Ada Validasi Input Negatif:** Jika kasir salah mengetik angka negatif (misal `-100000`), program tetap berjalan dan menghasilkan kupon negatif.
-4. **Format Cetak Mata Uang Tanpa Titik Pemisah:** Output nilai Rupiah tidak menggunakan pemisah ribuan titik (`Rp 250000` alih-alih `Rp250.000` seperti pada contoh soal `image5.png`).
+#### Masalah / Gejala pada Kode Awal:
+1. **Kupon Pecahan Desimal:** Pembagian tipe `float` menghasilkan kupon berupa pecahan desimal (misal belanja Rp 250.000 menghasilkan `2.5 lembar`), padahal kupon fisik wajib bilangan bulat yang dibulatkan ke bawah (*floor* $\rightarrow$ 2 lembar).
+2. **Diskon Tanpa Syarat Batas Minimal:** Diskon 5% langsung diberikan meskipun total belanja di bawah Rp 100.000 (misal belanja Rp 50.000 tetap terpotong diskon Rp 2.500).
+3. **Format Angka Rupiah:** Output nominal belum memiliki tanda titik pemisah ribuan (`Rp250.000`, `Rp12.500`, `Rp237.500`) sesuai contoh tampilan studi kasus.
 
 ---
 
-### 2. 💬 Prompt / Pertanyaan yang Diajukan ke AI Assistant
+### 2. Prompt / Pertanyaan ke AI Assistant
 
 ```text
-"Halo, saya sedang mengerjakan Tugas 2C di bahasa C untuk menghitung kupon undian dan diskon belanja supermarket. Ketentuan studi kasus adalah:
+"Halo, saya sedang membuat program C untuk Tugas 2C (perhitungan kupon undian dan diskon belanja supermarket). Ketentuan soal:
 1. Kupon undian diberikan 1 lembar per kelipatan Rp 100.000,00 dengan pembulatan ke bawah (floor).
-2. Diskon 5% hanya diberikan jika total pembelian minimal Rp 100.000,00.
+2. Diskon 5% hanya diberikan jika total belanja minimal Rp 100.000,00.
 
-Ini potongan kode saya:
-kupon = total_belanja / 100000;
-diskon = total_belanja * 0.05;
-
-Mengapa kupon saya menghasilkan nilai pecahan desimal, dan bagaimana perbaikan ekspresi perhitungannya di bahasa C agar pembagian kupon selalu membulat ke bawah secara konsisten tanpa library tambahan? Serta bagaimana penanganan syarat diskon 5%, validasi jika ada input negatif, dan fungsi cetak Rupiah dengan titik pemisah agar persis seperti contoh tampilan struk di soal (image5: Rp250.000, Rp12.500, Rp237.500)?"
+Pada kode saya saat ini, kupon undian menghasilkan pecahan desimal (2.5 lembar) dan diskon tetap terpotong walau belanja di bawah Rp 100.000. 
+Bagaimana cara memperbaiki logika pembagian di bahasa C agar otomatis membulat ke bawah tanpa pecahan, bagaimana menerapkan seleksi kondisi diskon yang tepat, dan bagaimana cara memformat cetak Rupiah dengan pemisah titik (misal Rp250.000) agar persis seperti contoh tampilan soal?"
 ```
 
 ---
 
-### 3. 🧠 Jawaban dan Evaluasi dari AI Code Assistant
+### 3. Jawaban dan Evaluasi dari AI Code Assistant
 
 > **Evaluasi AI:**
-> 1. **Perilaku Integer Division di C (Pengganti `floor()`):**  
->    Jika menggunakan tipe `float`, operator `/` akan menghasilkan pembagian riil desimal (`250000.0 / 100000.0 = 2.5`). Namun di bahasa C, jika kedua operan bertipe integer (`int / int`), pembagian otomatis melakukan **pemotongan desimal ke arah nol (*truncation towards zero*)**. Untuk semua angka positif, ini identik dengan pembulatan ke bawah (*floor*). Cukup deklarasikan variabel sebagai `int`, maka `250000 / 100000` otomatis menghasilkan `2`.
->
-> 2. **Penerapan Syarat Percabangan (`if-else`):**  
->    Diskon 5% tidak boleh langsung dihitung tanpa syarat. Harus dibungkus dengan kontrol seleksi: `if (total_pembelian >= 100000)` agar pembeli dengan transaksi di bawah Rp 100.000 mendapatkan diskon `0`.
->
+> 1. **Perilaku Integer Division di C (Otomatis *Floor*):**  
+>    Gantilah tipe data `total_pembelian` dan `jumlah_kupon` menjadi `int`. Di bahasa C, operasi pembagian bilangan bulat (`int / int`) secara otomatis melakukan pemotongan angka di belakang koma (*truncation towards zero*). Untuk semua nilai positif, operasi ini bekerja identik dengan fungsi pembulatan ke bawah (*floor*), sehingga `250000 / 100000` otomatis menghasilkan `2` lembar tanpa memerlukan library eksternal `<math.h>`.
+> 
+> 2. **Penerapan Struktur Seleksi `if-else` untuk Diskon:**  
+>    Perhitungan diskon wajib dibungkus dalam blok percabangan `if (total_pembelian >= 100000)`. Jika kondisi terpenuhi, diskon dihitung 5% dari total belanja awal. Jika tidak terpenuhi, diskon diset bernilai `0`. Disarankan menggunakan rumus aritmatika integer `(total_pembelian * 5) / 100` agar perhitungan bebas dari galat presisi *floating-point*.
+> 
 > 3. **Validasi Input Non-Negatif:**  
->    Tambahkan pemeriksaan `if (scanf("%d", &total_pembelian) != 1 || total_pembelian < 0)` di awal untuk mencegah angka negatif merusak perhitungan kupon.
->
-> 4. **Fungsi Sederhana Cetak Rupiah Bertitik (`cetak_rupiah`):**  
->    Gunakan fungsi `cetak_rupiah(int n)` yang mengubah angka ke teks via `sprintf` dan menyisipkan tanda titik setiap kelipatan 3 digit dari kanan sehingga menghasilkan `Rp250.000`, `Rp12.500`, dan `Rp237.500` sesuai dengan tangkapan layar dosen (`image5.png`).
+>    Tambahkan evaluasi `if (scanf("%d", &total_pembelian) != 1 || total_pembelian < 0)` untuk menolak angka negatif atau input yang bukan angka.
+> 
+> 4. **Fungsi Pemformatan Rupiah Bertitik (`cetak_rupiah`):**  
+>    Buat fungsi helper ringkas yang mengonversi integer ke string via `sprintf`, lalu mencetak prefiks `Rp` dan menyisipkan karakter titik `.` setiap sisa 3 digit dari kanan agar menghasilkan format resmi seperti `Rp250.000`.
 
 ---
 
-### 4. ✅ Perubahan Nyata pada Kode Setelah Konsultasi AI (Hasil Perbaikan)
+### 4. Kode Sesudah Konsultasi AI (Hasil Perbaikan Nyata)
 
-Berikut adalah kode yang telah disempurnakan dan diterapkan ke berkas `ACCA/tugas2c.c`:
+Berikut adalah kode yang telah disempurnakan dan diimplementasikan pada berkas `ACCA/tugas2c.c`:
 
 ```c
-// ========================================================
-// KODE SESUDAH KONSULTASI AI (Telah Diperbaiki & Sesuai)
-// ========================================================
 #include <stdio.h>
 
 // Mencetak nominal dengan format Rupiah bertitik, contoh: Rp250.000
@@ -101,26 +93,25 @@ void cetak_rupiah(int n) {
 }
 
 int main(void) {
+    // Deklarasi variabel menggunakan integer murni
     int total_pembelian = 0;
     int jumlah_kupon = 0;
     int diskon = 0;
     int total_dibayar = 0;
 
-    // 1. Input data total pembelian menggunakan formatted input scanf()
+    // 1. Input data total pembelian dengan validasi
     printf("Input total belanja: ");
     if (scanf("%d", &total_pembelian) != 1 || total_pembelian < 0) {
         printf("Input tidak valid! Harap masukkan nominal angka positif.\n");
         return 1;
     }
 
-    // 2. Hitung jumlah kupon undian
-    // Pembagian integer (total_pembelian / 100000) otomatis membulatkan ke bawah (floor)
+    // 2. Hitung jumlah kupon undian (pembagian integer otomatis membulatkan ke bawah)
     jumlah_kupon = total_pembelian / 100000;
 
-    // 3. Hitung diskon 5% menggunakan percabangan if-else (Modul Praktikum 2)
-    // Diskon hanya diberikan jika total pembelian minimal Rp 100.000,00
+    // 3. Hitung diskon 5% dengan percabangan (hanya jika belanja >= Rp 100.000)
     if (total_pembelian >= 100000) {
-        diskon = (int)(total_pembelian * 0.05); // 5% dari total pembelian awal
+        diskon = (total_pembelian * 5) / 100; // 5% dari total awal via integer math
     } else {
         diskon = 0;
     }
@@ -139,14 +130,8 @@ int main(void) {
 }
 ```
 
-#### Ringkasan Perbaikan yang Diterapkan:
-* `+` Mengubah tipe data dari `float` ke `int` sehingga ekspresi `total_pembelian / 100000` otomatis menghasilkan pembulatan ke bawah (*floor*) tanpa perlu memanggil library `<math.h>`.
-* `+` Menambahkan struktur kontrol `if (total_pembelian >= 100000)` agar diskon 5% tidak diberikan pada pembelian di bawah Rp 100.000.
-* `+` Menambahkan validasi `total_pembelian < 0` agar program menolak input negatif yang tidak realistis.
-* `+` Menambahkan fungsi `cetak_rupiah()` untuk mencetak format Rupiah bertitik (`Rp250.000`, `Rp12.500`, `Rp237.500`) persis sesuai contoh keluaran studi kasus (`image5.png`).
-
 ---
 
-### 5. 📝 Refleksi Singkat (4 Kalimat)
+### 5. Refleksi Singkat
 
-> Melalui konsultasi bersama AI Code Assistant, kami memahami bahwa operasi pembagian integer (`int / int`) pada bahasa C secara alami melakukan pemotongan desimal (*truncation*) yang berfungsi setara dengan operasi *floor* untuk bilangan positif. Kami juga menyadari pentingnya menambahkan struktur kendali percabangan `if-else` agar aturan minimum belanja Rp 100.000 untuk memperoleh diskon 5% terpenuhi dengan benar. Sebagai perbaikan konkret pada `tugas2c.c`, kami mengganti tipe variabel menjadi integer murni, menambahkan validasi penolakan belanja negatif, serta menerapkan pemformatan Rupiah bertitik via fungsi `cetak_rupiah()`. Penggunaan AI ini sangat membantu kami menguji ketahanan logika program (*edge case validation*) sekaligus memastikan format tampilan output akhir akurat 100%.
+> Melalui interaksi dengan AI Code Assistant, saya memahami bahwa operasi pembagian integer (`int / int`) pada bahasa C secara alami memotong angka desimal (*truncation*) yang berfungsi setara dengan pembulatan ke bawah (*floor*) untuk bilangan positif. Saya juga belajar pentingnya menerapkan struktur kendali `if-else` untuk menjamin syarat minimal transaksi Rp 100.000 terpenuhi sebelum mendiskon belanja, serta menggunakan aritmatika integer murni `(total * 5 / 100)` guna menghindari galat konversi *floating-point*. Sebagai perbaikan konkret pada `tugas2c.c`, saya mengganti tipe variabel menjadi integer, menambahkan validasi batas minimal belanja, serta membuat fungsi `cetak_rupiah()` untuk menyisipkan tanda titik ribuan. Penggunaan AI ini sangat membantu saya mengidentifikasi celah logika program dan menyempurnakan format keluaran agar presisi sesuai rubrik penilaian.

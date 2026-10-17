@@ -1,27 +1,3 @@
-/**
- * ============================================================================
- * Program      : tugas2a.c
- * Studi Kasus  : Supermarket Nusantara Sejahtera
- * Topik        : Data Pegawai & Penentuan Gaji Pokok (Struct)
- * Mata Kuliah  : Algorithm and Programming (COMP6112036) - ACCA
- * Kelas        : ACCA - LAB
- * Kelompok     : Group 1
- * ============================================================================
- * MATERI YANG DITERAPKAN (SESUAI DOKUMEN DI ACCA/docs/):
- * 1. Formatted I/O         : printf(), scanf() (Modul LN02)
- * 2. Selection & String    : if - else if, strcmp() (Modul Praktikum 2 Hal. 6)
- * 3. Structures (Struct)   : struct Pegawai (Modul Praktikum 3 Hal. 3)
- *
- * ATURAN DAN PETUNJUK PENGERJAAN:
- * 1. Struct Pegawai harus memiliki 6 field input:
- *    NIP, Nama, Alamat, No HP, Jabatan, Golongan.
- * 2. Tentukan Gaji Pokok otomatis berdasarkan golongan:
- *    - D1 : Rp 3.000.000 (3000000)
- *    - D2 : Rp 2.500.000 (2500000)
- *    - D3 : Rp 2.000.000 (2000000)
- * 3. Tampilkan data pegawai lengkap beserta nominal gaji pokoknya.
- * ============================================================================
- */
 
 #include <stdio.h>
 #include <string.h>
