@@ -10,12 +10,13 @@
 
 ## 👥 Profil Kelompok & Kontribusi Pengerjaan
 | No | Nama Mahasiswa | NIM | Peran Utama | Bagian Dikerjakan |
-|:--:|:---|:---:|:---:|:---|
-| 1 | Chandra Perdiansyah | 2802619424 | **Paket A (Role 1)** | Lead Reviewer, Flowchart System, Final Sign-off |
-| 2 | *[Anggota 2]* | *[NIM 2]* | **Paket B (Role 2)** | Implementasi Kode C Tugas 1 (`question_1.c`) |
-| 3 | *[Anggota 3]* | *[NIM 3]* | **Paket C (Role 3)** | Analisis RCA & Kode C Tugas 2 (`question_2_fixed.c`) |
-| 4 | *[Anggota 4]* | *[NIM 4]* | **Paket D (Role 4)** | Analisis Format File & Efisiensi Pengelolaan Memori |
-| 5 | *[Anggota 5]* | *[NIM 5]* | **Paket E (Role 5)** | Penyusunan Laporan, Diagram, & Sitasi Akademik |
+|:--:|:---|:---:|:---|:---|
+| 1 | Chandra Perdiansyah | 2802619424 | **System Architect & Lead Reviewer** | Desain Struct, Format File, Analisis Alokasi Memori, Final Merge & QA |
+| 2 | *[Anggota 2]* | *[NIM 2]* | **Module Developer 1** | Pseudocode & Flowchart Operasi Tambah Data Siswa |
+| 3 | *[Anggota 3]* | *[NIM 3]* | **Module Developer 2** | Pseudocode & Flowchart Operasi Cari Data Siswa |
+| 4 | *[Anggota 4]* | *[NIM 4]* | **Module Developer 3** | Pseudocode & Flowchart Operasi Hapus Data Siswa (Temp File Filter) |
+| 5 | *[Anggota 5]* | *[NIM 5]* | **Security & Memory Auditor** | Tugas 2: Analisis 5 Bug Memori (RCA), Kode C Perbaikan, & Flowchart |
+
 
 ---
 
