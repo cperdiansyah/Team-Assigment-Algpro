@@ -1,26 +1,17 @@
-/**
- * ============================================================================
- * Program      : tugas2c.c
- * Studi Kasus  : Supermarket Nusantara Sejahtera
- * Topik        : Perhitungan Hadiah Belanja dan Diskon untuk Pelanggan
- * Mata Kuliah  : Algorithm and Programming (COMP6112036) - ACCA
- * Kelas        : ACCA - LAB
- * Kelompok     : Group 1
- * ============================================================================
- * MATERI YANG DITERAPKAN (SESUAI MODUL PRAKTIKUM BINUS):
- * 1. Formatted Input & Output  : scanf() dan printf() (Modul LN02)
- * 2. Operator & Aritmatika     : Integer division (/) dan perkalian (*) (Modul Week 4)
- * 3. Kontrol Program (Seleksi) : Percabangan if - else (Modul Praktikum 2)
- *
- * ATURAN STUDI KASUS:
- * 1. Input total pembelian (dalam Rupiah).
- * 2. Kupon undian: 1 kupon per kelipatan Rp 100.000,00 (pembulatan ke bawah via integer division).
- * 3. Diskon: 5% jika total pembelian minimal Rp 100.000,00.
- * 4. Total yang harus dibayar: Total pembelian - diskon.
- * ============================================================================
- */
 
 #include <stdio.h>
+
+// Mencetak nominal dengan format Rupiah bertitik, contoh: Rp250.000
+void cetak_rupiah(int n) {
+    char buf[16];
+    int len = sprintf(buf, "%d", n);   // ubah angka jadi teks
+    printf("Rp");
+    for (int i = 0; i < len; i++) {
+        printf("%c", buf[i]);
+        int sisa = len - i - 1;        // sisa digit di kanan
+        if (sisa > 0 && sisa % 3 == 0) printf(".");
+    }
+}
 
 int main(void) {
     // Deklarasi variabel sesuai materi dasar tipe data C
@@ -43,8 +34,8 @@ int main(void) {
     // 3. Hitung diskon 5% menggunakan percabangan if-else (Modul Praktikum 2)
     // Diskon hanya diberikan jika total pembelian minimal Rp 100.000,00
     if (total_pembelian >= 100000) {
-        diskon = (int)(total_pembelian * 0.05); // 5% dari total pembelian awal
-    } else {
+        diskon = (total_pembelian * 5) / 100; // 5% dari total pembelian awal via aritmatika integer
+} else {
         diskon = 0;
     }
 
@@ -53,10 +44,10 @@ int main(void) {
 
     // 5. Tampilkan rincian output sesuai format studi kasus
     printf("\nOutput:\n");
-    printf("Total pembelian     : Rp %d\n", total_pembelian);
+    printf("Total pembelian     : "); cetak_rupiah(total_pembelian); printf("\n");
     printf("Jumlah kupon undian : %d lembar\n", jumlah_kupon);
-    printf("Diskon              : Rp %d\n", diskon);
-    printf("Total dibayar       : Rp %d\n", total_dibayar);
+    printf("Diskon              : "); cetak_rupiah(diskon); printf("\n");
+    printf("Total dibayar       : "); cetak_rupiah(total_dibayar); printf("\n");
 
     return 0;
 }

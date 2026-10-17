@@ -12,13 +12,13 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
 | Sub-Tugas | File Deliverable | PIC (Anggota) | Status Pengerjaan |
 |---|---|:---:|:---:|
 | **Soal 1 — Kode C** | `question_1.c` | *[Paket B / Role 2]* | 🟢 Selesai (Kode di Git) |
-| **Soal 1 — Flowchart** | Diagram Gambar (Word) | *[Paket B / Role 2]* | 🟡 Menunggu Pembuatan |
-| **Soal 1 — Analisis Memori** | Teks Analisis (Word) | *[Paket D / Role 4]* | 🟡 Menunggu Pembuatan |
-| **Soal 2 — Analisis RCA Bug** | Teks Analisis (Word) | *[Paket C / Role 3]* | 🟢 Selesai di Word (Perlu Koreksi Minor) |
+| **Soal 1 — Flowchart & Desain** | Teks & Diagram (Word) | *[Paket B / Role 2]* | 🟢 Selesai (Diinjeksikan ke Word) |
+| **Soal 1 — Analisis Memori** | Teks Analisis (Word) | *[Paket D / Role 4]* | 🟢 Selesai (Diinjeksikan ke Word) |
+| **Soal 2 — Analisis RCA Bug** | Teks Analisis (Word) | *[Paket C / Role 3]* | 🟢 Selesai (Sudah Dikoreksi) |
 | **Soal 2 — Kode C Perbaikan** | `question_2_fixed.c` | *[Paket C / Role 3]* | 🟢 Selesai (Sinkron di Git) |
 | **Soal 2 — Flowchart Sorting** | Diagram Gambar (Word) | *[Paket D / Role 4]* | 🟢 Selesai di Word (Link Canva) |
-| **Laporan & Referensi DCCA** | Lembar Word SharePoint | *[Paket E / Role 5]* | 🟡 Soal 2 Terisi, Soal 1 Masih Kosong |
-| **AI Declaration Form & QA** | `AI_Usage...docx` | *[Paket A & E]* | 🟡 Menunggu Finalisasi |
+| **Laporan & Referensi DCCA** | `TK1-W7-S15-R3 - Jawab (1).docx` | *[Paket E / Role 5]* | 🟢 **100% LENGKAP (Soal 1 & 2)** |
+| **AI Declaration Form & QA** | `AI_Usage...docx` | *[Paket A & E]* | 🟡 Menunggu TTD & Submisi |
 
 ---
 
@@ -33,14 +33,15 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
   - [x] Definisikan `struct ItemKatalog` yang memuat judul, tahun terbit, jenis media (`enum`), dan `DetailMedia`.
   - [x] Lengkapi fungsi `input_item()` untuk menerima data dari user (percabangan input sesuai jenis media).
   - [x] Lengkapi fungsi `tampilkan_item()` untuk mencetak rincian katalog sesuai jenis media.
-  - [ ] Uji kompilasi: `gcc -Wall -Wextra soal1.c -o soal1.exe` (harus 0 warning / 0 error).
-- [ ] **Laporan Word Online (SharePoint):**
-  - [ ] Tuliskan penjelasan konsep struktur data yang diusulkan dan alasan pemisahan `struct`/`union`.
-  - [ ] Buat dan tempelkan gambar **Flowchart Soal 1** (alur input $\rightarrow$ selection media $\rightarrow$ cetak output).
-  - [ ] Tuliskan analisis efisiensi memori:
-    - Hitung ukuran byte `sizeof(InfoBuku)`, `sizeof(InfoMajalah)`, dan `sizeof(DetailMedia)`.
-    - Bandingkan total ukuran memori jika menggunakan `struct` biasa vs `union` (tunjukkan persentase/penghematan byte).
-  - [ ] Salin source code `question_1.c` ke lembar jawaban.
+  - [x] Uji kompilasi: `gcc -Wall -Wextra question_1.c -o question_1.exe` (0 warning / 0 error).
+- [x] **Laporan Word (`TK1-W7-S15-R3 - Jawab (1).docx`):**
+  - [x] Tuliskan penjelasan konsep struktur data yang diusulkan dan alasan pemisahan `struct`/`union`.
+  - [x] Tuliskan narasi alur **Flowchart Soal 1** (alur input $\rightarrow$ selection media $\rightarrow$ cetak output).
+  - [x] Tuliskan analisis efisiensi memori kuantitatif:
+    - Ukuran byte `sizeof(InfoBuku)` (54 B), `sizeof(InfoMajalah)` (24 B), dan `sizeof(DetailMedia)` (54 B).
+    - Perbandingan memori struct biasa (78 B) vs union (54 B) -> penghematan 24 B (~30.77%) per item.
+    - Simulasi penghematan 240 KB RAM untuk 10.000 item koleksi.
+  - [x] Salin source code `question_1.c` lengkap dengan blok kode monospace dan sitasi referensi LN07.
 
 ---
 
@@ -52,12 +53,12 @@ Gunakan berkas ini untuk melacak perkembangan tugas, checklist pengerjaan kode C
     - Tracing manual kegagalan array pada iterasi terakhir: array menjadi `[12, 25, 34, 64, 22]`.
   - [x] Perbaiki fungsi `sort()` menggunakan Bubble Sort yang benar (`for i=0..n-1`, `for j=0..n-1-i`, `arr[j] > arr[j+1]`).
   - [x] Uji coba fungsi dengan array yang diberikan di soal: `{64, 34, 25, 12, 22}` $\rightarrow$ `{12, 22, 25, 34, 64}`.
-- [x] **Laporan Word Online (SharePoint):**
+- [x] **Laporan Word (`TK1-W7-S15-R3 - Jawab (1).docx`):**
   - [x] Tuliskan narasi penjelasan letak bug dan dampaknya terhadap array (sudah di Word).
   - [x] Buat dan tempelkan gambar **Flowchart Sorting Soal 2** (link Canva sudah di Word).
   - [x] Lampirkan screenshot output terminal eksekusi `soal2_fixed.exe` (sudah di Word).
   - [x] Salin source code `question_2_fixed.c` ke lembar jawaban (sudah di Word).
-  - [ ] *Action:* Koreksi salah ketik konsep di Word ("nilai dikiri lebih kecil" -> "lebih besar").
+  - [x] *Action Selesai:* Koreksi typo konsep di Word ("nilai dikiri lebih kecil" -> "lebih besar") & "j > n" -> "j < n".
 
 ---
 
