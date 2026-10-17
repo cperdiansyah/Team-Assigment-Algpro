@@ -24,6 +24,7 @@ Tujuan dibuatnya panduan ini adalah agar kita semua punya **standar desain yang 
 DCCA 2/
 ├── README.md                           <-- (File ini) Panduan & instruksi lengkap untuk tim
 ├── TK2-W8-S21-R3 - Jawaban Lengkap.md   <-- File laporan akhir yang akan di-merge oleh Chan
+├── siswa.txt                           <-- Contoh file database fisik data siswa (sample data)
 │
 ├── 📁 templates/                       <-- Tempat kalian mengerjakan tugas masing-masing
 │   ├── template_tugas1_operasi.md      <-- Template untuk Anggota 2 (Tambah), 3 (Cari), 4 (Hapus)
