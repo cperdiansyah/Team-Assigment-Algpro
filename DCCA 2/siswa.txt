@@ -1,0 +1,20 @@
+2024001|Chandra Perdiansyah|20
+2024002|Budi Santoso|21
+2024003|Siti Nurhaliza, S.Kom|23
+2024004|Ahmad Fauzi Pratama|19
+2024005|Jessica Meliani Tan|22
+2024006|Muhammad Rizky Ramadhan|20
+2024007|Dewi Lestari Putri|21
+2024008|Kevin Sanjaya Wijaya|22
+2024009|Anisa Rahmawati|19
+2024010|Dimas Anggara Putra|24
+2024011|Farhan Alamsyah|20
+2024012|Putri Wulandari, S.T.|25
+2024013|Rio Ferdinand Siregar|21
+2024014|Tiara Andini Kusuma|19
+2024015|Bagus Tri Wibowo|22
+2024016|Nadya Syifa Salsabila|20
+2024017|Christian Aditya|23
+2024018|Zahra Aulia Maharani|19
+2024019|Eko Prasetyo Nugroho|21
+2024020|Stephanie Grace Halim|20
