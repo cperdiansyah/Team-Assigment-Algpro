@@ -35,9 +35,9 @@ Halo teman-teman! Agar pengerjaan tugas kelompok ini **adil, jelas, dan tidak ad
 
 Jika kalian ingin memahami konsep lebih dalam atau butuh inspirasi bagaimana cara menyusun prompt AI yang menghasilkan draf jawaban berkualitas tinggi, kalian bisa membuka folder:
 📁 [**`haicola/`**](./haicola/README.md)
-- [**`haicola/haicola-soal1-hanoi.md`**](./haicola/haicola-soal1-hanoi.md): Studi kasus & prompt AI untuk Towers of Hanoi (Slot 1 & 4).
-- [**`haicola/haicola-soal2-factorial.md`**](./haicola/haicola-soal2-factorial.md): Studi kasus & prompt AI untuk Faktorial Rekursif (Slot 2 & 3).
-- [**`haicola/haicola-soal3-search-siswa.md`**](./haicola/haicola-soal3-search-siswa.md): Studi kasus & prompt AI untuk File Processing & Linear Search (Slot 4 & 5).
+- [**`haicola/haicola-soal1-hanoi.md`**](./haicola/haicola-soal1-hanoi.md): Studi kasus & prompt AI untuk Towers of Hanoi (Slot 1 & Slot 2).
+- [**`haicola/haicola-soal2-factorial.md`**](./haicola/haicola-soal2-factorial.md): Studi kasus & prompt AI untuk Faktorial Rekursif (Slot 3).
+- [**`haicola/haicola-soal3-search-siswa.md`**](./haicola/haicola-soal3-search-siswa.md): Studi kasus & prompt AI untuk File Processing & Linear Search (Slot 4 & Slot 5).
 
 ---
 
