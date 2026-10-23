@@ -42,7 +42,7 @@ Untuk mencegah konflik saat mengedit berkas Word secara offline di Git, penulisa
 Team-Assigment-Algpro/
 ├── README.md                                  # [INI] Portal utama, link cloud doc, & katalog peran
 │
-├── DCCA/                                      # [Sesi Lecture / Teori] - Kelas DCCA - LEC
+├── DCCA/                                      # [TK 1 - Lecture / Teori] - Struct & Union, Sorting
 │   ├── TK1-W7-S15-R3.docx                     # Panduan soal resmi teori
 │   ├── docs/                                  # Modul PDF resmi Lecture (LN04, LN05, LN06, LN07)
 │   ├── AI_Usage_Declaration_Form_EN.docx      # Formulir deklarasi AI resmi DCCA
@@ -50,6 +50,23 @@ Team-Assigment-Algpro/
 │   ├── soal1.c                                # Starter code Struct & Union katalog buku/majalah
 │   ├── soal2_fixed.c                          # Starter code perbaikan algoritma sorting
 │   └── readme.md                              # Dokumentasi teknis & tautan cloud DCCA
+│
+├── DCCA 2/                                    # [TK 2 - Lecture / Teori] - File Handling & Dynamic Memory
+│   ├── README.md                              # Panduan pengerjaan TK2
+│   ├── TK2-W8-S21-R3 - Jawaban Lengkap.md     # Laporan lengkap TK2
+│   ├── siswa.txt                              # Basis data sampel siswa
+│   └── src/                                   # Kode C memori & validasi alokasi
+│
+├── DCCA 3/                                    # [TK 3 - Lecture / Teori] - Recursion, Structs, File Searching
+│   ├── README.md                              # Panduan lengkap, flowchart mermaid, analisis, & kompilasi TK3
+│   ├── docs/
+│   │   ├── TK3-W9-S22-R3.docx                 # Panduan soal resmi TK3
+│   │   └── JAWABAN_TK3.md                     # Draf laporan lengkap formal (siap disalin ke Word)
+│   └── src/
+│       ├── hanoi.c                            # Soal 1: Simulasi Towers of Hanoi 4 cakram (15 langkah)
+│       ├── factorial.c                        # Soal 2: Kalkulator faktorial rekursif aman (fixed bug)
+│       ├── search_siswa.c                     # Soal 3: Pencarian data siswa (array of struct + linear search)
+│       └── siswa.txt                          # File data sampel siswa
 │
 └── ACCA/                                      # [Sesi Lab / Praktikum] - Kelas ACCA - LAB
     ├── Tugas Praktikum 2 (Kelompok)...docx   # Panduan soal resmi praktikum
