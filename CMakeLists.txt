@@ -17,5 +17,11 @@ add_executable(TugasACCA_2C ACCA/tugas2c.c)
 add_executable(TugasDCCA_1 DCCA/question_1.c)
 add_executable(TugasDCCA_2 DCCA/question_2_fixed.c)
 
+# DCCA 3 (Week 9 - Sesi 22 - R3)
+add_executable(TugasDCCA3_Hanoi "DCCA 3/src/hanoi.c")
+add_executable(TugasDCCA3_Factorial "DCCA 3/src/factorial.c")
+add_executable(TugasDCCA3_SearchSiswa "DCCA 3/src/search_siswa.c")
+
+
 
 
