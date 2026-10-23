@@ -40,14 +40,14 @@
 > 2. Buka berkas template kerja terarah yang sesuai di dalam folder [`outline/`](./outline/).
 > 3. Kerjakan draf jawaban kalian langsung pada file template tersebut, lalu laporkan ke PIC (Chandra) untuk digabungkan ke laporan akhir.
 
-| Slot | Modul yang Dikerjakan | File Template Kerja | Kategori Tugas | Status Pemilihan |
-| :---: | :---| :---| :---: | :---: |
-| **Slot 1** | **Soal 1A & 1B:** Pseudo code Towers of Hanoi (4 cakram) + Penjelasan detail alur rekursi, *base case* ($n=1$), dan tabel 15 langkah perpindahan cakram. | [`outline/slot_1_hanoi_algoritma.md`](./outline/slot_1_hanoi_algoritma.md) | Logika Algoritma | `[ ] Open Slot (TBD)` |
-| **Slot 2** | **Soal 2A & 2B:** Analisis akar penyebab (*RCA*) *bug* logika `infinite recursion` & *stack overflow* pada faktorial + Pseudo code perbaikan. | [`outline/slot_2_faktorial_analisis.md`](./outline/slot_2_faktorial_analisis.md) | Analisis Logika | `[ ] Open Slot (TBD)` |
-| **Slot 3** | **Soal 2C & Referensi:** Menggambar diagram alir (*flowchart*) faktorial perbaikan (Mermaid/draw.io) + Menyusun daftar referensi akademik sesuai format. | [`outline/slot_3_faktorial_flowchart.md`](./outline/slot_3_faktorial_flowchart.md) | Visual & Sitasi | `[ ] Open Slot (TBD)` |
-| **Slot 4** | **Soal 1C & Soal 3C:** Analisis kompleksitas waktu Towers of Hanoi ($O(2^n)$) + Evaluasi perbandingan Linear Search (10, 100, 1.000 data) & rekomendasi optimasi. *(Murni teks analisis teoretis, tidak butuh koding/flowchart).* | [`outline/slot_4_analisis_kompleksitas.md`](./outline/slot_4_analisis_kompleksitas.md) | Teori & Analisis | `[ ] Open Slot (TBD)` |
-| **Slot 5** | **Soal 3A, 3B & Kompilasi:** Pseudo code file processing `siswa.txt`, koding C *array of struct* + *Linear Search*, pengujian GCC, dan kompilasi laporan akhir Word. | [`outline/slot_5_search_siswa_pic.md`](./outline/slot_5_search_siswa_pic.md) | Koding C & Integrasi | `[x] Chandra Perdiansyah (PIC)` |
+| Slot | Fokus Soal | Modul yang Dikerjakan | File Template Kerja | Kategori Tugas | Status Pemilihan |
 
+| :---: | :---: | :---| :---| :---: | :---: |
+| **Slot 1** | **Soal 1** *(Hanoi Part 1)* | **Soal 1A & 1B:** Pseudo code Towers of Hanoi (4 cakram) + Penjelasan detail alur rekursi, *base case* ($n=1$), dan tabel 15 langkah perpindahan cakram. | [`outline/slot_1_soal1_hanoi_algoritma.md`](./outline/slot_1_soal1_hanoi_algoritma.md) | Logika Algoritma | `[ ] Open Slot (TBD)` |
+| **Slot 2** | **Soal 1** *(Hanoi Part 2)* | **Soal 1C & Diagram:** Penurunan matematis persamaan rekurensi $T(n) = 2T(n-1) + 1 \implies \mathcal{O}(2^n)$ dan ruang $\mathcal{O}(n)$ + Menggambar *flowchart* Towers of Hanoi. | [`outline/slot_2_soal1_hanoi_teori_flowchart.md`](./outline/slot_2_soal1_hanoi_teori_flowchart.md) | Teori & Visual | `[ ] Open Slot (TBD)` |
+| **Slot 3** | **Soal 2** *(Faktorial Full)* | **Soal 2A, 2B & 2C:** Analisis akar penyebab (*RCA*) *bug* `infinite recursion` & *stack overflow* pada faktorial + Pseudo code perbaikan + *Flowchart* faktorial rekursif yang benar. | [`outline/slot_3_soal2_faktorial_full.md`](./outline/slot_3_soal2_faktorial_full.md) | Analisis & Visual | `[ ] Open Slot (TBD)` |
+| **Slot 4** | **Soal 3** *(Siswa Part 1)* | **Soal 3A & 3C:** Pseudo code pembacaan berkas `siswa.txt` & Linear Search + Analisis evaluasi perbandingan data (10, 100, 1.000 data) & rekomendasi optimasi skala besar. | [`outline/slot_4_soal3_siswa_desain_analisis.md`](./outline/slot_4_soal3_siswa_desain_analisis.md) | Desain & Analisis | `[ ] Open Slot (TBD)` |
+| **Slot 5** | **Soal 3** *(Siswa Part 2 & PIC)* | **Soal 3B & Kompilasi:** Implementasi program C `search_siswa.c` (*array of struct* + *Linear Search*), pengelolaan berkas `siswa.txt`, penyusunan referensi formal, dan kompilasi laporan akhir Word. | [`outline/slot_5_soal3_siswa_koding_pic.md`](./outline/slot_5_soal3_siswa_koding_pic.md) | Koding C & Integrasi | `[x] Chandra Perdiansyah (PIC)` |
 
 ---
 
@@ -57,13 +57,18 @@
 DCCA 3/
 ├── README.md                        # [File Ini] Panduan utama, pembagian tugas, & deskripsi soal
 │
-├── outline/                         # [Folder Kerja Tim] Lembar kerja template untuk masing-masing slot
+├── outline/                         # [Folder Kerja Tim] Lembar kerja template per soal untuk masing-masing slot
 │   ├── README.md                    # Panduan ringkas alur pengerjaan tim
-│   ├── slot_1_hanoi_algoritma.md    # Lembar kerja Slot 1 (Soal 1A & 1B)
-│   ├── slot_2_faktorial_analisis.md # Lembar kerja Slot 2 (Soal 2A & 2B)
-│   ├── slot_3_faktorial_flowchart.md# Lembar kerja Slot 3 (Soal 2C & Referensi)
-│   ├── slot_4_analisis_kompleksitas.md # Lembar kerja Slot 4 (Soal 1C & 3C)
-│   └── slot_5_search_siswa_pic.md   # Catatan pengerjaan Slot 5 (PIC)
+│   ├── haicola/                     # [Referensi HAICOLA] Dokumentasi resmi Human-AI Collaboration & prompt acuan
+│   │   ├── README.md                # Katalog panduan HAICOLA
+│   │   ├── haicola-soal1-hanoi.md   # Studi kasus & prompt AI Soal 1 (Towers of Hanoi)
+│   │   ├── haicola-soal2-factorial.md # Studi kasus & prompt AI Soal 2 (Faktorial Rekursif)
+│   │   └── haicola-soal3-search-siswa.md # Studi kasus & prompt AI Soal 3 (File Processing)
+│   ├── slot_1_soal1_hanoi_algoritma.md       # Lembar kerja Slot 1 (Soal 1A & 1B)
+│   ├── slot_2_soal1_hanoi_teori_flowchart.md # Lembar kerja Slot 2 (Soal 1C & Flowchart Hanoi)
+│   ├── slot_3_soal2_faktorial_full.md        # Lembar kerja Slot 3 (Soal 2A, 2B, 2C Full)
+│   ├── slot_4_soal3_siswa_desain_analisis.md # Lembar kerja Slot 4 (Soal 3A & 3C)
+│   └── slot_5_soal3_siswa_koding_pic.md      # Catatan pengerjaan Slot 5 (PIC - Soal 3B & Integrasi)
 │
 ├── docs/
 │   └── TK3-W9-S22-R3.docx           # Berkas instruksi soal resmi dari Binus
@@ -80,9 +85,10 @@ DCCA 3/
 - **Deskripsi Masalah:**  
   Merancang fungsi rekursif untuk menyelesaikan Towers of Hanoi dengan **4 cakram**. Menampilkan langkah-langkah perpindahan dari **Tiang A (Source)** ke **Tiang C (Destination)** dengan **Tiang B (Auxiliary)** sebagai tiang penyangga sementara.
 - **Deliverables yang Diharapkan:**
-  1. *Pseudo code* dan/atau *flowchart* untuk fungsi rekursif Towers of Hanoi (dikerjakan di **Slot 1**).
+  1. *Pseudo code* untuk fungsi rekursif Towers of Hanoi (dikerjakan di **Slot 1**).
   2. Penjelasan detail kondisi dasar (*base case* saat $n=1$), cara pemecahan sub-masalah ($n-1$), dan tabel rincian 15 langkah perpindahan cakram (dikerjakan di **Slot 1**).
-  3. Analisis penurunan persamaan rekurensi waktu $T(n) = 2T(n-1) + 1$ yang menghasilkan kompleksitas $\mathcal{O}(2^n)$ dan ruang $\mathcal{O}(n)$ (dikerjakan di **Slot 4**).
+  3. Menggambar diagram alir (*flowchart*) rekursif Towers of Hanoi (dikerjakan di **Slot 2**).
+  4. Analisis penurunan persamaan rekurensi waktu $T(n) = 2T(n-1) + 1$ yang menghasilkan kompleksitas $\mathcal{O}(2^n)$ dan ruang $\mathcal{O}(n)$ (dikerjakan di **Slot 2**).
 
 ---
 
@@ -97,8 +103,8 @@ DCCA 3/
           return n * factorial(n)
   ```
 - **Deliverables yang Diharapkan:**
-  1. Identifikasi dan penjelasan kesalahan logika: Mengapa pemanggilan `factorial(n)` pada blok `else` menyebabkan *infinite recursion* dan *call stack overflow* (dikerjakan di **Slot 2**).
-  2. Versi perbaikan *pseudo code* yang benar (mengubah argumen menjadi `n - 1` serta penanganan bilangan negatif) (dikerjakan di **Slot 2**).
+  1. Identifikasi dan penjelasan kesalahan logika: Mengapa pemanggilan `factorial(n)` pada blok `else` menyebabkan *infinite recursion* dan *call stack overflow* (dikerjakan di **Slot 3**).
+  2. Versi perbaikan *pseudo code* yang benar (mengubah argumen menjadi `n - 1` serta penanganan bilangan negatif) (dikerjakan di **Slot 3**).
   3. Menggambar diagram alir (*flowchart*) rekursif yang benar (dikerjakan di **Slot 3**).
 
 ---
@@ -113,11 +119,13 @@ DCCA 3/
   Citra 17 230103
   ```
 - **Deliverables yang Diharapkan:**
-  1. *Pseudo code* / *flowchart* pembacaan data berkas teks dan pencarian berdasarkan nama (dikerjakan di **Slot 5 - PIC**).
-  2. Implementasi algoritma pencarian *Linear Search* (`strcmp`) serta penanganan validasi jika nama siswa tidak ditemukan (dikerjakan di **Slot 5 - PIC**).
-  3. Analisis perbandingan konseptual waktu pencarian jika file berisi **10 data, 100 data, dan 1.000 data** ($\mathcal{O}(n)$), serta rekomendasi optimasi (*Sorting + Binary Search*, *Hash Table*, atau *Trie*) jika data semakin membesar (dikerjakan di **Slot 4**).
+  1. *Pseudo code* pembacaan data berkas teks dan pencarian berdasarkan nama (dikerjakan di **Slot 4**).
+  2. Analisis perbandingan konseptual waktu pencarian jika file berisi **10 data, 100 data, dan 1.000 data** ($\mathcal{O}(n)$), serta rekomendasi optimasi (*Sorting + Binary Search*, *Hash Table*, atau *Trie*) jika data semakin membesar (dikerjakan di **Slot 4**).
+  3. Implementasi algoritma pencarian C *Linear Search* (`strcmp`) serta penanganan validasi jika nama siswa tidak ditemukan di `search_siswa.c` (dikerjakan di **Slot 5 - PIC**).
+  4. Penyusunan daftar referensi formal dan kompilasi seluruh draf ke dokumen Word/SharePoint akhir (dikerjakan di **Slot 5 - PIC**).
 
 ---
+
 
 ## 📐 Standar Penulisan & Format Akademik Bersama
 

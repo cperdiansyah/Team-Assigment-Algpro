@@ -1,13 +1,14 @@
-# 📝 LEMBAR KERJA SLOT 1: SOAL 1A & 1B (TOWERS OF HANOI)
+# 📝 LEMBAR KERJA SLOT 1: SOAL 1A & 1B (TOWERS OF HANOI — BAGIAN ALGORITMA)
+**Fokus Soal:** Soal 1 (Towers of Hanoi 4 Cakram)  
+**Modul:** Soal 1A (Pseudo Code) & Soal 1B (Penjelasan Alur Rekursi, Base Case, dan 15 Langkah)  
 **Nama Anggota:** [Tulis Nama Lengkap Anda di sini]  
 **NIM:** [Tulis NIM Anda di sini]  
-**Modul:** Soal 1A (Pseudo Code) & Soal 1B (Penjelasan Alur Rekursi, Base Case, dan 15 Langkah)  
-**Bobot Bagian:** 25% dari total nilai tugas  
+**Bobot Bagian:** 20% dari total nilai tugas  
 
 ---
 
 ## 🎯 Instruksi Pengerjaan (Berdasarkan Soal Resmi Binus)
-> *"Buat pseudo code atau flowchart untuk fungsi rekursif Towers of Hanoi.*  
+> *"Buat pseudo code untuk fungsi rekursif Towers of Hanoi.*  
 > *Jelaskan secara terperinci setiap langkah rekursi, termasuk kondisi dasar (base case) dan cara fungsi memecah masalah menjadi sub-masalah yang lebih kecil."*
 
 **Tugas Anda:**
@@ -41,7 +42,6 @@ Setelah AI memberikan jawaban, silakan baca, pahami, dan tempelkan hasilnya pada
 ---
 
 ## ✍️ LEMBAR JAWABAN ANDA
-
 
 ### 1. Pseudo Code Algoritma Rekursif Towers of Hanoi (Soal 1A)
 *Lengkapi bagian `// TODO` pada template berikut:*
@@ -118,8 +118,6 @@ END
 
 ---
 
-## ✅ Checklist Sebelum Mengumpulkan ke PIC
-- [ ] Pseudo code sudah lengkap dan menggunakan kata kunci kapital (`BEGIN`, `END`, `IF`, `CALL`).
-- [ ] Penjelasan konsep *base case* dan sub-masalah $(n-1)$ sudah dijawab.
-- [ ] Seluruh baris langkah 1 sampai 15 pada tabel sudah terisi lengkap.
-- [ ] Laporkan ke PIC (Chandra) via grup WhatsApp.
+## 📚 Referensi Pendukung
+- Buka dokumen studi kasus HAICOLA Soal 1 di [`./haicola/haicola-soal1-hanoi.md`](./haicola/haicola-soal1-hanoi.md) jika butuh penjelasan konsep yang lebih lengkap.
+- Anda dapat berkoordinasi dengan rekan pemegang **Slot 2** yang sama-sama mengerjakan topik Towers of Hanoi.
