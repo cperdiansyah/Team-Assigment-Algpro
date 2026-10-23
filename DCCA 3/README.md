@@ -4,7 +4,6 @@
 **Dosen Pengampu:** D5816 - ERIC GUNAWAN, S.Kom., M.TI  
 **Minggu Perkuliahan:** Week 9 (Sesi 22 - R3)  
 **Topik Pembelajaran:** Functions, Recursion, Structures, and File Processing with Searching  
-**Koordinator Kelompok (PIC):** Chandra Perdiansyah (NIM: 3002887011)
 
 ---
 
@@ -38,16 +37,15 @@
 > 💡 **Petunjuk Alur Kerja Anggota Tim:**  
 > 1. Diskusikan di grup WhatsApp dan pilih salah satu slot yang masih berstatus `[ ] Belum Dipilih / Open Slot`.
 > 2. Buka berkas template kerja terarah yang sesuai di dalam folder [`outline/`](./outline/).
-> 3. Kerjakan draf jawaban kalian langsung pada file template tersebut, lalu laporkan ke PIC (Chandra) untuk digabungkan ke laporan akhir.
+> 3. Kerjakan draf jawaban kalian langsung pada file template tersebut, lalu laporkan ke grup agar terdokumentasi dan siap digabungkan ke laporan akhir.
 
 | Slot | Fokus Soal | Modul yang Dikerjakan | File Template Kerja | Kategori Tugas | Status Pemilihan |
-
 | :---: | :---: | :---| :---| :---: | :---: |
 | **Slot 1** | **Soal 1** *(Hanoi Part 1)* | **Soal 1A & 1B:** Pseudo code Towers of Hanoi (4 cakram) + Penjelasan detail alur rekursi, *base case* ($n=1$), dan tabel 15 langkah perpindahan cakram. | [`outline/slot_1_soal1_hanoi_algoritma.md`](./outline/slot_1_soal1_hanoi_algoritma.md) | Logika Algoritma | `[ ] Open Slot (TBD)` |
 | **Slot 2** | **Soal 1** *(Hanoi Part 2)* | **Soal 1C & Diagram:** Penurunan matematis persamaan rekurensi $T(n) = 2T(n-1) + 1 \implies \mathcal{O}(2^n)$ dan ruang $\mathcal{O}(n)$ + Menggambar *flowchart* Towers of Hanoi. | [`outline/slot_2_soal1_hanoi_teori_flowchart.md`](./outline/slot_2_soal1_hanoi_teori_flowchart.md) | Teori & Visual | `[ ] Open Slot (TBD)` |
 | **Slot 3** | **Soal 2** *(Faktorial Full)* | **Soal 2A, 2B & 2C:** Analisis akar penyebab (*RCA*) *bug* `infinite recursion` & *stack overflow* pada faktorial + Pseudo code perbaikan + *Flowchart* faktorial rekursif yang benar. | [`outline/slot_3_soal2_faktorial_full.md`](./outline/slot_3_soal2_faktorial_full.md) | Analisis & Visual | `[ ] Open Slot (TBD)` |
 | **Slot 4** | **Soal 3** *(Siswa Part 1)* | **Soal 3A & 3C:** Pseudo code pembacaan berkas `siswa.txt` & Linear Search + Analisis evaluasi perbandingan data (10, 100, 1.000 data) & rekomendasi optimasi skala besar. | [`outline/slot_4_soal3_siswa_desain_analisis.md`](./outline/slot_4_soal3_siswa_desain_analisis.md) | Desain & Analisis | `[ ] Open Slot (TBD)` |
-| **Slot 5** | **Soal 3** *(Siswa Part 2 & PIC)* | **Soal 3B & Kompilasi:** Implementasi program C `search_siswa.c` (*array of struct* + *Linear Search*), pengelolaan berkas `siswa.txt`, penyusunan referensi formal, dan kompilasi laporan akhir Word. | [`outline/slot_5_soal3_siswa_koding_pic.md`](./outline/slot_5_soal3_siswa_koding_pic.md) | Koding C & Integrasi | `[x] Chandra Perdiansyah (PIC)` |
+| **Slot 5** | **Soal 3** *(Siswa Part 2)* | **Soal 3B & Kompilasi:** Implementasi program C `search_siswa.c` (*array of struct* + *Linear Search*), pengelolaan berkas `siswa.txt`, penyusunan referensi formal, dan kompilasi laporan akhir Word. | [`outline/slot_5_soal3_siswa_koding_pic.md`](./outline/slot_5_soal3_siswa_koding_pic.md) | Koding C & Integrasi | `[x] Chandra` |
 
 ---
 
