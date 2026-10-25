@@ -13,7 +13,7 @@
    - Menulis kode program C yang bersih, modular, dan lolos kompilasi tanpa warning (`gcc -Wall -Wextra -std=c11`).
    - Menerapkan pembacaan `siswa.txt` ke dalam `array of struct`.
    - Mengimplementasikan algoritma *Linear Search* (`strcmp`) serta penanganan validasi informatif jika data siswa tidak ditemukan.
-   - Menyediakan berkas data sampel di `src/siswa.txt`.
+   - Menyediakan berkas data sampel di `docs/siswa.txt`.
 2. **Format Daftar Referensi:**  
    - Memastikan seluruh sumber yang digunakan tim mematuhi format wajib BINUS:  
      $$\text{Nama sumber, Tautan (jika ada), diakses pada [Tanggal Akses]}$$
@@ -27,7 +27,7 @@
 
 ### 1. Implementasi Kode Program C (`src/search_siswa.c`)
 - [x] Kode program C telah dibuat di [`../src/search_siswa.c`](../src/search_siswa.c).
-- [x] Berkas sampel data teks siswa telah dibuat di [`../src/siswa.txt`](../src/siswa.txt).
+- [x] Berkas sampel data teks siswa telah dibuat di [`../docs/siswa.txt`](../docs/siswa.txt).
 - [x] Telah diuji kompilasi dengan GCC 15.2.0 (`gcc -Wall -Wextra -std=c11 search_siswa.c -o search_siswa.exe`).
 - [x] Validasi data berhasil diuji untuk skenario data ditemukan (`Citra`) dan skenario data tidak ditemukan (`Zul`).
 

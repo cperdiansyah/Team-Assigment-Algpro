@@ -69,10 +69,10 @@ DCCA 3/
 │   └── slot_5_soal3_siswa_koding_pic.md      # Catatan pengerjaan Slot 5 (PIC - Soal 3B & Integrasi)
 │
 ├── docs/
-│   └── TK3-W9-S22-R3.docx           # Berkas instruksi soal resmi dari Binus
+│   ├── TK3-W9-S22-R3.docx           # Berkas instruksi soal resmi dari Binus
+│   └── siswa.txt                    # Berkas sampel data teks siswa ([Nama] [Umur] [No_Reg])
 │
-└── src/
-    └── siswa.txt                    # Berkas sampel data teks siswa ([Nama] [Umur] [No_Reg])
+└── src/                             # Implementasi program bahasa C (lokal)
 ```
 
 ---
