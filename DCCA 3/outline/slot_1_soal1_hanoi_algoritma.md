@@ -1,8 +1,8 @@
 # 📝 LEMBAR KERJA SLOT 1: SOAL 1A & 1B (TOWERS OF HANOI — BAGIAN ALGORITMA)
 **Fokus Soal:** Soal 1 (Towers of Hanoi 4 Cakram)  
 **Modul:** Soal 1A (Pseudo Code) & Soal 1B (Penjelasan Alur Rekursi, Base Case, dan 15 Langkah)  
-**Nama Anggota:** [Tulis Nama Lengkap Anda di sini]  
-**NIM:** [Tulis NIM Anda di sini]  
+**Nama Anggota:** Arsyan Qasthari  
+**NIM:** 3002924032  
 **Bobot Bagian:** 20% dari total nilai tugas  
 
 ---
@@ -59,22 +59,22 @@ ALGORITHM SolveHanoi(n, sourceRod, destinationRod, auxiliaryRod)
 BEGIN
     // TODO 1: Tuliskan Kondisi Dasar (Base Case)
     // Apa yang harus dilakukan jika hanya tersisa 1 cakram (n == 1)?
-    IF n == 1 THEN
-        [Tuliskan aksi pemindahan cakram 1 ke tiang tujuan...]
+     IF n == 1 THEN
+        PRINT "Pindahkan cakram 1 dari", sourceRod, "ke", destinationRod
         RETURN
     ENDIF
 
     // TODO 2: Tuliskan Pemanggilan Rekursif Pertama (Sub-masalah 1)
     // Pindahkan (n - 1) cakram dari sourceRod ke auxiliaryRod menggunakan destinationRod
-    [CALL SolveHanoi(...)]
+    CALL SolveHanoi(n - 1, sourceRod, auxiliaryRod, destinationRod)
 
     // TODO 3: Tuliskan Langkah Pemindahan Cakram Terbesar (Langkah Utama)
     // Pindahkan cakram ke-n dari sourceRod langsung ke destinationRod
-    [PRINT ...]
+    PRINT "Pindahkan cakram", n, "dari", sourceRod, "ke", destinationRod
 
     // TODO 4: Tuliskan Pemanggilan Rekursif Kedua (Sub-masalah 2)
     // Pindahkan (n - 1) cakram dari auxiliaryRod ke destinationRod menggunakan sourceRod
-    [CALL SolveHanoi(...)]
+    CALL SolveHanoi(n - 1, auxiliaryRod, destinationRod, sourceRod)
 END
 ```
 
@@ -86,11 +86,11 @@ END
 
 1. **Apa itu Kondisi Dasar (*Base Case*) dalam algoritma ini dan mengapa saat $n = 1$ rekursi berhenti?**  
    > *Jawaban Anda:*  
-   > [Tuliskan penjelasan Anda di sini...]
+   > Kondisi dasar (base case) adalah batas akhir dari fungsi rekursif agar program tidak mengalami infinite loop (pengulangan tanpa batas). Ketika $n = 1$, masalahnya sudah sangat sederhana sehingga cakram tinggal langsung dipindahkan dari tiang asal ke tiang tujuan tanpa butuh tiang bantuan lagi. Lalu fungsi dihentikan dengan perintah return
 
 2. **Bagaimana fungsi memecah masalah besar menjadi sub-masalah yang lebih kecil ($n - 1$)?**  
    > *Jawaban Anda:*  
-   > [Tuliskan penjelasan pemecahan sub-masalah di sini...]
+   > Fungsi memecah masalah besar dengan prinsip divide and conquer. Untuk memindahkan $n$ cakram dari tiang asal ke tiang tujuan, algoritma membaginya menjadi tiga tahap utama: (1) Memindahkan $n-1$ cakram teratas ke tiang pembantu agar tiang asal clean, (2) Memindahkan cakram terbesar ke-$n$ langsung ke tiang tujuan, dan (3) Memindahkan kembali $n-1$ cakram dari tiang pembantu ke atas tiang tujuan
 
 ---
 
@@ -100,24 +100,25 @@ END
 
 | Langkah | Cakram yang Dipindahkan | Dari Tiang | Menuju Tiang | Penjelasan Singkat Logika |
 | :---: | :---: | :---: | :---: | :---|
-| **1** | Cakram 1 (Terkecil) | A | B | [Tuliskan alasan/posisi...] |
-| **2** | Cakram 2 | A | C | [Tuliskan alasan/posisi...] |
-| **3** | Cakram 1 | B | C | [Tuliskan alasan/posisi...] |
-| **4** | Cakram 3 | A | B | [Tuliskan alasan/posisi...] |
-| **5** | Cakram 1 | C | A | [Tuliskan alasan/posisi...] |
-| **6** | Cakram 2 | C | B | [Tuliskan alasan/posisi...] |
-| **7** | Cakram 1 | A | B | [Tuliskan alasan/posisi...] |
+| **1** | Cakram 1 (Terkecil) | A | B | Memindahkan cakram 1 ke tiang pembantu (B) sebagai langkah awal membuka jalan |
+| **2** | Cakram 2 | A | C | Memindahkan cakram 2 ke tiang tujuan (C) |
+| **3** | Cakram 1 | B | C | Menumpuk kembali cakram 1 di atas cakram 2 pada tiang C |
+| **4** | Cakram 3 | A | B | Memindahkan cakram 3 ke tiang pembantu (B) |
+| **5** | Cakram 1 | C | A | Memindahkan cakram 1 sementara ke tiang A agar tiang C kosong |
+| **6** | Cakram 2 | C | B | Menumpuk cakram 2 di atas cakram 3 pada tiang B |
+| **7** | Cakram 1 | A | B | Menempatkan kembali cakram 1 di atas tumpukan tiang B |
 | **8** | **Cakram 4 (Terbesar)** | **A** | **C** | **Cakram terbesar berhasil mendarat di tiang tujuan!** |
-| **9** | Cakram 1 | B | C | [Tuliskan alasan/posisi...] |
-| **10** | Cakram 2 | B | A | [Tuliskan alasan/posisi...] |
-| **11** | Cakram 1 | C | A | [Tuliskan alasan/posisi...] |
-| **12** | Cakram 3 | B | C | [Tuliskan alasan/posisi...] |
-| **13** | Cakram 1 | A | B | [Tuliskan alasan/posisi...] |
-| **14** | Cakram 2 | A | C | [Tuliskan alasan/posisi...] |
+| **9** | Cakram 1 | B | C | Memindahkan cakram 1 ke tiang C untuk memulai penyusunan ulang |
+| **10** | Cakram 2 | B | A | Memindahkan cakram 2 ke tiang asal (A) |
+| **11** | Cakram 1 | C | A | Menumpuk cakram 1 di atas cakram 2 pada tiang A |
+| **12** | Cakram 3 | B | C | Memindahkan cakram 3 ke tiang tujuan (C) di atas cakram 4 |
+| **13** | Cakram 1 | A | B | Memindahkan cakram 1 sementara ke tiang B |
+| **14** | Cakram 2 | A | C | Menumpuk cakram 2 di tiang tujuan (C) |
 | **15** | Cakram 1 (Terkecil) | B | C | Selesai! Seluruh 4 cakram tersusun sempurna di Tiang C. |
 
 ---
 
 ## 📚 Referensi Pendukung
-- Buka dokumen studi kasus HAICOLA Soal 1 di [`./haicola/haicola-soal1-hanoi.md`](./haicola/haicola-soal1-hanoi.md) jika butuh penjelasan konsep yang lebih lengkap.
+- Deitel, P. J., & Deitel, H. M., C How to Program: With an Introduction to C++ (8th Edition), Pearson Education, diakses pada 25 Oktober 2026
+- GeeksforGeeks, Tower of Hanoi - Recursion Algorithm and Complexity Analysis, https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/, diakses pada 25 Oktober 2026
 - Anda dapat berkoordinasi dengan rekan pemegang **Slot 2** yang sama-sama mengerjakan topik Towers of Hanoi.
