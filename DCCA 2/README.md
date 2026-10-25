@@ -24,6 +24,8 @@ Tujuan dibuatnya panduan ini adalah agar kita semua punya **standar desain yang 
 DCCA 2/
 ├── README.md                           <-- (File ini) Panduan & instruksi lengkap untuk tim
 ├── TK2-W8-S21-R3 - Jawaban Lengkap.md   <-- File laporan akhir yang akan di-merge oleh Chan
+├── tugas1-haicola.md                   <-- Dokumentasi resmi sesi HAICOLA Tugas 1 (File I/O)
+├── tugas2-haicola.md                   <-- Dokumentasi resmi sesi HAICOLA Tugas 2 (Dynamic Memory)
 ├── siswa.txt                           <-- Contoh file database fisik data siswa (sample data)
 │
 ├── 📁 templates/                       <-- Tempat kalian mengerjakan tugas masing-masing
@@ -31,7 +33,8 @@ DCCA 2/
 │   └── template_tugas2_memory.md       <-- Template untuk Anggota 5 (Tugas 2 Alokasi Memori)
 │
 ├── 📁 src/                             <-- Folder kode C
-│   └── question_2_buggy.c              <-- Kode asli bermasalah dari soal (untuk dikerjakan Anggota 5)
+│   ├── question_2_buggy.c              <-- Kode asli bermasalah dari soal (untuk dikerjakan Anggota 5)
+│   └── question_2_fix.c                <-- Kode C perbaikan yang aman & tervalidasi (bebas leak)
 │
 └── 📁 docs/                            <-- Dokumen soal asli & tempat naruh gambar flowchart
     └── TK2-W8-S21-R3 (1).docx
@@ -199,6 +202,16 @@ int main() {
 * **H-2 Deadline (Checkpoint Draf):** Semua anggota wajib mengumpulkan draf pekerjaan pertamanya ke Chan untuk direview bersama. *(Khusus Anggota 5 yang di luar negeri, tolong sesuaikan waktu agar checkpoint ini tidak terlewat).*
 * **H-1 Deadline (Merging & Review Akhir):** Chan menggabungkan seluruh modul ke file laporan akhir `TK2-W8-S21-R3 - Jawaban Lengkap.md` dan melakukan pengecekan sitasi/format.
 * **H-0 (Submission):** Laporan final di-submit ke portal Binus.
+
+---
+
+## 🤖 Dokumentasi HAICOLA (Human-AI Collaboration)
+
+Sesuai ketentuan integritas akademik Universitas Bina Nusantara dan pengisian formulir `AI_Usage_Declaration_Form_EN.docx`, sesi konsultasi AI untuk perancangan arsitektur dan debugging kode telah didokumentasikan secara transparan:
+* 📄 [**HAICOLA Tugas 1 — Sistem Manajemen File Database Siswa**](tugas1-haicola.md)  
+  *Mendokumentasikan evolusi desain file I/O, eliminasi risiko data loss pada operasi hapus melalui Safe Temporary File Filter, dan analisis memory footprint streaming $O(1)$.*
+* 📄 [**HAICOLA Tugas 2 — Debugging & Alokasi Memori Dinamis**](tugas2-haicola.md)  
+  *Mendokumentasikan Root Cause Analysis (RCA) 5 bug pada kode asli soal, pencegahan sinyal SIGSEGV, mitigasi integer overflow, serta implementasi `free()` dan defensive nullification.*
 
 ---
 
