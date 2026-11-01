@@ -92,6 +92,7 @@ int main(void) {
     // 1. Muat data dari berkas teks saat program dibuka (Slot 4 - Week 9)
     loadBooksFromFile(FILE_BOOKS, books, &bookCount);
     loadHistoryFromFile(FILE_HISTORY, histories, &historyCount);
+    printf("\n[SISTEM] Berhasil memuat %d buku dan %d riwayat transaksi dari berkas.\n", bookCount, historyCount);
 
     // 2. Loop Menu Utama
     int choice = 0;
