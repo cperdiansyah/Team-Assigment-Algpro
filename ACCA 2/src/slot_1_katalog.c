@@ -1,7 +1,7 @@
 /**
  * ========================================================================================
  * SLOT 1: MANAJEMEN KATALOG BUKU (MENU 1, MENU 3, MENU 5)
- * PIC: [Nama Rekan Pemegang Slot 1]
+ * PIC: Arsyan Qasthari
  *
  * PANDUAN PENGERJAAN UNTUK ANGGOTA TIM:
  * Modul ini bertugas mengelola katalog buku toko "Literasi Nusantara Jaya".
@@ -27,16 +27,36 @@
  * 6. Tampilkan pesan sukses: "Data buku berhasil ditambahkan ke sistem!"
  */
 void handleInputBook(Book books[], int *bookCount) {
-    (void)books;
-    (void)bookCount;
     printf("\n=======================================================\n");
     printf("               INPUT DATA BUKU BARU\n");
     printf("=======================================================\n");
 
-    printf("[TODO Slot 1] Fitur Menu 1 (Input Buku) belum diimplementasikan.\n");
-    printf(">> Silakan buka file 'src/slot_1_katalog.c' dan tulis kodinganmu di sini!\n");
+    // TODO1 : Tulis kodinganmu di sini...
+    int nextId = *bookCount + 1;
+    snprintf(books[*bookCount].bookCode, sizeof(books[*bookCount].bookCode), "BK%03d", nextId);
+    printf("Kode Buku Otomatis : %s\n", books[*bookCount].bookCode);
 
-    // TODO: Tulis kodinganmu di sini...
+    printf("Masukkan Nama Buku : ");
+    getchar();
+    fgets(books[*bookCount].title, sizeof(books[*bookCount].title), stdin);
+    books[*bookCount].title[strcspn(books[*bookCount].title, "\n")] = 0;
+
+    printf("Masukkan Jenis Buku: ");
+    fgets(books[*bookCount].category, sizeof(books[*bookCount].category), stdin);
+    books[*bookCount].category[strcspn(books[*bookCount].category, "\n")] = 0;
+
+    do {
+        printf("Masukkan Harga Buku: ");
+        if (scanf("%lf", &books[*bookCount].price) != 1) {
+            printf("[ERROR] Masukkan angka yang valid!\n");
+            while (getchar() != '\n');
+            books[*bookCount].price = -1;
+        } else if (books[*bookCount].price <= 0) {
+            printf("[ERROR] Harga haruslebih besar dari 0!\n");
+        }
+    } while (books[*bookCount].price <= 0);
+    (*bookCount)++;
+    printf("\nData buku berhasil ditambahkan ke sistem!\n");
 }
 
 /**
@@ -63,10 +83,21 @@ void handleViewBooks(const Book books[], int bookCount) {
         return;
     }
 
-    printf("[TODO Slot 1] Fitur Menu 3 (View Buku) belum diimplementasikan.\n");
-    printf(">> Silakan buka file 'src/slot_1_katalog.c' dan tulis kodingan tabelmu di sini!\n");
-
     // TODO: Tulis kodingan looping cetak tabel buku di sini...
+    printf("\n+-----+------------+--------------------------------+-------------------+-----------------+\n");
+    printf("| NO  | KODE       | NAMA BUKU                      | JENIS             | HARGA (RP)      |\n");
+    printf("+-----+------------+--------------------------------+-------------------+-----------------+\n");
+    for (int i = 0; i < bookCount; i++) {
+        printf("| %-3d | %-10s | %-30s | %-17s | Rp %10.2f |\n", 
+               i + 1, 
+               books[i].bookCode, 
+               books[i].title, 
+               books[i].category, 
+               books[i].price);
+    }
+
+    printf("+-----+------------+--------------------------------+-------------------+-----------------+\n");
+    printf("[INFO] Total Koleksi Buku: %d Buku\n", bookCount);
 }
 
 /**
@@ -92,15 +123,38 @@ void handleDeleteBook(Book books[], int *bookCount) {
     (void)bookCount;
     printf("\n=======================================================\n");
     printf("                  HAPUS DATA BUKU\n");
-    printf("=======================================================\n");
+    printf("========================================================\n");
 
     if (*bookCount == 0) {
         printf(">> [INFO] Belum ada data buku untuk dihapus.\n");
         return;
     }
 
-    printf("[TODO Slot 1] Fitur Menu 5 (Delete Buku) belum diimplementasikan.\n");
-    printf(">> Silakan buka file 'src/slot_1_katalog.c' dan tulis kodingan array shifting di sini!\n");
-
     // TODO: Tulis kodingan hapus buku di sini...
+    // 2. Tampilkan terlebih dahulu daftar buku
+    handleViewBooks(books, *bookCount);
+
+    int deleteIdx;
+    // 3. Minta input nomor urut yang ingin dihapus
+    printf("\nMasukkan nomor urut buku yang ingin dihapus (1 - %d): ", *bookCount);
+    if (scanf("%d", &deleteIdx) != 1) {
+        printf("[ERROR] Input tidak valid!\n");
+        while (getchar() != '\n');
+        return;
+    }
+
+    // 4. Validasi indeks: pastikan dalam rentang 1 s.d. *bookCount
+    if (deleteIdx < 1 || deleteIdx > *bookCount) {
+        printf("[ERROR] Indeks tidak valid! Pilih nomor antara 1 dan %d.\n", *bookCount);
+        return;
+    }
+
+    // 5. Lakukan pergeseran array (Array Shifting) ke kiri
+    int targetIdx = deleteIdx - 1; // Konversi ke 0-based index
+    for (int i = targetIdx; i < *bookCount - 1; i++) {
+        books[i] = books[i + 1];
+    }
+    (*bookCount)--;
+    // 6. Tampilkan pesan sukses persis sesuai teks soal
+    printf("Data Successfully delete..\n");
 }
