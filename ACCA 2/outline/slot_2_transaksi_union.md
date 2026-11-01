@@ -46,15 +46,15 @@ typedef struct {
 ## 🛠️ Kontrak Antarmuka Fungsi (Function Prototypes)
 
 ```c
-// 1. Mencatat transaksi baru (memeriksa ketersediaan buku & menghitung total)
-void inputTransaction(const Book *books, int bookCount, 
-                      TransactionHistory **histories, int *historyCount, int *historyCapacity);
+// 1. Mencatat transaksi baru (Menu 7)
+void handleInputTransaction(const Book books[], int bookCount, 
+                            TransactionHistory histories[], int *historyCount);
 
-// 2. Menampilkan seluruh data histori transaksi penjualan
-void viewAllHistory(const TransactionHistory *histories, int historyCount);
+// 2. Menampilkan seluruh data histori transaksi penjualan (Menu 2)
+void handleViewHistory(const TransactionHistory histories[], int historyCount);
 
-// 3. Menghapus riwayat transaksi tertentu berdasarkan indeks pilihan pengguna
-void deleteHistoryByIndex(TransactionHistory *histories, int *historyCount);
+// 3. Menghapus riwayat transaksi tertentu berdasarkan indeks pilihan pengguna (Menu 4)
+void handleDeleteHistory(TransactionHistory histories[], int *historyCount);
 ```
 
 ---

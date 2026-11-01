@@ -30,14 +30,14 @@ typedef struct {
 ## 🛠️ Kontrak Antarmuka Fungsi (Function Prototypes)
 
 ```c
-// 1. Menambahkan buku baru dan auto-generate kode buku
-void inputNewBook(Book **books, int *bookCount, int *bookCapacity);
+// 1. Menambahkan buku baru dan auto-generate kode buku (Menu 1)
+void handleInputBook(Book books[], int *bookCount);
 
-// 2. Menampilkan seluruh data buku dalam format tabel
-void viewAllBooks(const Book *books, int bookCount);
+// 2. Menampilkan seluruh data buku dalam format tabel (Menu 3)
+void handleViewBooks(const Book books[], int bookCount);
 
-// 3. Menghapus data buku berdasarkan indeks pilihan pengguna
-void deleteBookByIndex(Book *books, int *bookCount);
+// 3. Menghapus data buku berdasarkan indeks pilihan pengguna (Menu 5)
+void handleDeleteBook(Book books[], int *bookCount);
 ```
 
 ---
