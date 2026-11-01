@@ -3,6 +3,13 @@ project(src C)
 
 set(CMAKE_C_STANDARD 11)
 
-# Karena main.c sudah langsung me-include slot_1 s.d. slot_5,
-# hanya main.c yang perlu dikompilasi ke executable.
+# Kompilasi main.c sebagai entry point utama
 add_executable(src main.c)
+
+# Pastikan file data tersedia di direktori runtime (cmake-build-debug)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/databuku.txt")
+    file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/databuku.txt" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+endif()
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/history.txt")
+    file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/history.txt" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+endif()
